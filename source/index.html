@@ -1,12 +1,201 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial scale=1">
+  <title>HTML Academy: Седона</title>
+</head>
 
-  </body>
+<body class="page__body">
+
+  <header class="page-header">
+    <a class="page-header__logo" href="">
+      <img src="#" alt="логотип city of sedona">
+    </a>
+
+    <nav class="nav">
+      <div class="nav__wrapper">
+        <ul class="nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a class="main-button">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="main-button" href="photo.html">
+              Фото и видео
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="main-button" href="form.html">
+              Форма Отзыва
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="main-button" href="https://htmlacademy.ru/study">
+              HTML ACADEMY
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="visually-hidden nav__toggle" type="button">открыть/закрыть меню</button>
+
+    </nav>
+
+    <!-- предполагаю надписи вокруг седоны будут в svg, поэтому тег img -->
+
+    <img class="header__welcome" src="#" alt="welcome to the gorgeous">
+
+    <p class="header__title title">Sedona</p>
+
+    <img class="header__slogan" src="#" alt="because the Grand Canyone sucks">
+
+  </header>
+
+  <main class="page-main">
+
+    <h1 class="page-main__title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!
+    </h1>
+
+    <section class="advantages">
+      <h2 class="advantages__title">
+        Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+      </h2>
+
+      <ul class="advantages__list advantages-list">
+        <li class="advantages-list__item">
+          <h3 class="advantages-list__title">
+            Настоящий городок
+          </h3>
+          <p class="advantages-list__N">
+            — №1 —
+          </p>
+          <p class="advantages-list__description">
+            Седона не аттакцион для туристов, там течет своя жизнь
+          </p>
+
+          <img class="advantages-list__img" src="#" alt="фото города Седона">
+
+          <ul class="real-city-list">
+            <li class="real-city-list__item real-city-list__item--home">
+              <h4 class="real-city-list__title">
+                Жилье
+              </h4>
+              <p class="real-city-list__description">
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
+              </p>
+            </li>
+            <li class="real-city-list__item real-city-list__item--souvenirs">
+              <h4 class="real-city-list__title">
+                Сувениры
+              </h4>
+              <p class="real-city-list__description">
+                Не только китайского, но и местного производства!
+              </p>
+            </li>
+            <li class="real-city-list__item real-city-list__item--food">
+              <h4 class="real-city-list__title">
+                Еда
+              </h4>
+              <p class="real-city-list__description">
+                Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+              </p>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="advantages-list__item">
+          <h3 class="advantages-list__title">
+            Там есть мост дьявола
+          </h3>
+          <p class="advantages-list__N">
+            — №2 —
+          </p>
+          <p class="advantages-list__description">
+            Да, по нему можно пройти! Если вы осмелитесь, конечно
+          </p>
+
+          <img class="advantages-list__img" src="#" alt="фото моста дьявола в Седоне">
+
+        </li>
+
+        <li class="advantages-list__item">
+          <h3 class="advantages-list__title">
+            Небольшая площадь
+          </h3>
+          <p class="advantages-list__N">
+            — №3 —
+          </p>
+          <p class="advantages-list__description">
+            Все интересные места находятся очень близко
+          </p>
+        </li>
+
+        <li class="advantages-list__item">
+          <h3 class="advantages-list__title">
+            Красивая дорога
+          </h3>
+          <p class="advantages-list__N">
+            — №4 —
+          </p>
+          <p class="advantages-list__description">
+            Ехать в Седону из Лас-Вегаса совсем не скучно!
+          </p>
+
+        </li>
+        <li class="advantages-list__item">
+          <h3 class="advantages-list__title">
+            Мало туристов
+          </h3>
+          <p class="advantages-list__N">
+            — №5 —
+          </p>
+          <p class="advantages-list__description">
+            Большинство едет в гранд каньон и толпится там
+          </p>
+
+        </li>
+
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+
+    <p class="page-footer__hashtag">
+      #visitsedona
+    </p>
+
+    <ul class="page-footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" aria-label="Седона в твиттере" href="">
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--fb" aria-label="Седона в фэйсбуке" href="">
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" aria-label="Седона на ютубе" href="">
+        </a>
+      </li>
+    </ul>
+
+    <div class="page-footer__dev dev">
+      <p class="dev__text">
+        Разработано
+      </p>
+      <a class="dev__logo-link" href="https://htmlacademy.ru/intensive/adaptive"
+        aria-label="разработчик: html академия">
+      </a>
+    </div>
+  </footer>
+
+</body>
+
 </html>
