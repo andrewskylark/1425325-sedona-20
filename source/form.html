@@ -53,6 +53,91 @@
     <h1 class="visually-hidden">Седона — небольшой городок в Аризоне, заслуживающий большего!
     </h1>
 
+    <section class="form">
+
+      <h2 class="form__title">
+        Оставьте свой отзыв
+      </h2>
+
+      <p class="form__text">
+        Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+      </p>
+
+      <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
+
+        <fieldset>
+
+          <legend>Представьтесь:</legend>
+
+          <label for="name">Имя<sup>*</sup>:</label>
+          <input type="text" id="name" name="name" placeholder="Петр" required>
+
+          <label for="surname">Фамилия<sup>*</sup>:</label>
+          <input type="text" id="surname" name="surname" placeholder="Иванов" required>
+
+          <label for="middlename">Отчество:</label>
+          <input type="text" id="middlename" name="middlename" placeholder="Александрович">
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>Контактная информация:</legend>
+
+          <label for="tel">Контактный телефон<sup>*</sup>:</label>
+          <input type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
+
+          <label for="email">Электронная почта<sup>*</sup>:</label>
+          <input type="email" id="email" name="email" placeholder="Иванов" required>
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>Ваше общее впечатление:</legend>
+
+          <input class="visually-hidden" type="radio" id="good" value="impression" checked>
+          <label for="good">Скорее положительное</label>
+
+          <input class="visually-hidden" type="radio" id="bad" value="impression">
+          <label for="bad">Скорее отрицательное</label>
+
+          <input class="visually-hidden" type="radio" id="indifferent" value="impression">
+          <label for="indifferent">Затрудняюсь ответить</label>
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>посещенные достопримечательности:</legend>
+
+          <input class="visually-hidden" type="checkbox" id="devil-bridge" value="devil-bridge" checked>
+          <label for="devil-bridge">Мост Дьявола</label>
+
+          <input class="visually-hidden" type="checkbox" id="mountain" value="mountain" checked>
+          <label for="mountain">Гора-Колокол</label>
+
+          <input class="visually-hidden" type="checkbox" id="slide-park" value="slide-park" checked>
+          <label for="slide-park">Слайд-парк</label>
+
+          <input class="visually-hidden" type="checkbox" id="redrocks" value="redrocks">
+          <label for="redrocks">Красные скалы</label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Опишите свои эмоции:</legend>
+
+          <textarea autofocus>Опишите подробно все свои восторги
+          </textarea>
+
+        </fieldset>
+
+        <button class="main-button" type="submit">Отправить отзыв</button>
+      </form>
+
+    </section>
+
   </main>
 
   <footer class="page-footer">
