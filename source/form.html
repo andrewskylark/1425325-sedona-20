@@ -10,7 +10,7 @@
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo" href="#">
+    <a class="page-header__logo" href="index.html">
       <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="логотип city of sedona">
     </a>
 
@@ -18,22 +18,22 @@
       <div class="nav__wrapper">
         <ul class="nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="main-button" href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button" href="photo.html">
+            <a class="site-list__link" href="photo.html">
               Фото и видео
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button">
+            <a class="site-list__link">
               Форма Отзыва
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button" href="https://htmlacademy.ru/study">
+            <a class="site-list__link" href="https://htmlacademy.ru/study">
               HTML ACADEMY
             </a>
           </li>
@@ -52,6 +52,91 @@
 
     <h1 class="visually-hidden">Седона — небольшой городок в Аризоне, заслуживающий большего!
     </h1>
+
+    <section class="review">
+
+      <h2 class="review__title">
+        Оставьте свой отзыв
+      </h2>
+
+      <p class="review__text">
+        Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+      </p>
+
+      <form class="review__form form" action="https://echo.htmlacademy.ru" method="post">
+
+        <fieldset class="form__fieldset">
+
+          <legend class="form__legend">Представьтесь:</legend>
+
+          <label class="form__label" for="name">Имя<sup>*</sup>:</label>
+          <input class="form__input" type="text" id="name" name="name" placeholder="Петр" required>
+
+          <label class="form__label" for="surname">Фамилия<sup>*</sup>:</label>
+          <input class="form__input" type="text" id="surname" name="surname" placeholder="Иванов" required>
+
+          <label class="form__label" for="middlename">Отчество:</label>
+          <input class="form__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
+
+        </fieldset>
+
+        <fieldset class="form__fieldset" >
+
+          <legend class="form__legend">Контактная информация:</legend>
+
+          <label class="form__label form__label--phone" for="tel">Контактный телефон<sup>*</sup>:</label>
+          <input class="form__input" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
+
+          <label class="form__label form__label--email" for="email">Электронная почта<sup>*</sup>:</label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="Иванов" required>
+
+        </fieldset>
+
+        <fieldset class="form__fieldset" >
+
+          <legend class="form__legend">Ваше общее впечатление:</legend>
+
+          <input class="visually-hidden" type="radio" id="good" name="impression" checked>
+          <label class="form__label form__label--bold" for="good">Скорее положительное</label>
+
+          <input class="visually-hidden" type="radio" id="bad" name="impression">
+          <label class="form__label form__label--bold" for="bad">Скорее отрицательное</label>
+
+          <input class="visually-hidden" type="radio" id="indifferent" name="impression">
+          <label class="form__label form__label--bold" for="indifferent">Затрудняюсь ответить</label>
+
+        </fieldset>
+
+        <fieldset class="form__fieldset" >
+
+          <legend class="form__legend">посещенные достопримечательности:</legend>
+
+          <input class="visually-hidden" type="checkbox" id="devil-bridge" value="devil-bridge" checked>
+          <label class="form__label form__label--bold" for="devil-bridge">Мост Дьявола</label>
+
+          <input class="visually-hidden" type="checkbox" id="mountain" value="mountain" checked>
+          <label class="form__label form__label--bold" for="mountain">Гора-Колокол</label>
+
+          <input class="visually-hidden" type="checkbox" id="slide-park" value="slide-park" checked>
+          <label class="form__label form__label--bold" for="slide-park">Слайд-парк</label>
+
+          <input class="visually-hidden" type="checkbox" id="redrocks" value="redrocks">
+          <label class="form__label form__label--bold" for="redrocks">Красные скалы</label>
+
+        </fieldset>
+
+        <fieldset class="form__fieldset" >
+          <legend class="form__legend">Опишите свои эмоции:</legend>
+
+          <textarea class="form__input form__input--textarea" autofocus>Опишите подробно все свои восторги
+          </textarea>
+
+        </fieldset>
+
+        <button class="form__button main-button" type="submit">Отправить отзыв</button>
+      </form>
+
+    </section>
 
   </main>
 

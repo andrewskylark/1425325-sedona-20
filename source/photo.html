@@ -10,7 +10,7 @@
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo" href="">
+    <a class="page-header__logo" href="index.html">
       <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="логотип city of sedona">
     </a>
 
@@ -18,22 +18,22 @@
       <div class="nav__wrapper">
         <ul class="nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="main-button" href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button">
+            <a class="site-list__link">
               Фото и видео
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button" href="form.html">
+            <a class="site-list__link" href="form.html">
               Форма Отзыва
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button" href="https://htmlacademy.ru/study">
+            <a class="site-list__link" href="https://htmlacademy.ru/study">
               HTML ACADEMY
             </a>
           </li>
@@ -53,79 +53,101 @@
     <h1 class="visually-hidden">Седона — небольшой городок в Аризоне, заслуживающий большего!
     </h1>
 
-    <section class="photos">
-      <h2 class="photos__title">
+    <section class="gallery">
+      <h2 class="gallery__title">
         Фото и видео
       </h2>
 
-      <p class="photos__text">
+      <p class="gallery__text">
         Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике
       </p>
 
-      <ul class="photos__list photos-list">
-        <li class="photos-list__item">
+      <ul class="gallery__list">
+        <li class="gallery__item">
 
-          <figure class="photos-list__img">
-            <img class="" src="https://via.placeholder.com/150x150" width="150" height="150"
+          <figure class="gallery__photo">
+            <img class="gallery__photo" src="https://via.placeholder.com/150x150" width="150" height="150"
               alt="фото дороги на рассвете">
-            <figcaption>
+            <figcaption class="gallery__caption">
               неродные просторы
-              <cite>
+              <cite class="gallery__author">
                 Автор фото: Борис
               </cite>
             </figcaption>
           </figure>
-          <span class="photos-list__likes">1350</span>
+          <span class="gallery__likes">1350</span>
 
         </li>
 
-        <li class="photos-list__item">
+        <li class="gallery__item">
 
-          <figure class="photos-list__img">
-            <img class="" src="https://via.placeholder.com/150x150" width="150" height="150"
+          <figure class="gallery__photo">
+            <img class="gallery__img" src="https://via.placeholder.com/150x150" width="150" height="150"
               alt="фото кактуса на фоне гор в Седоне">
-            <figcaption>
+            <figcaption class="gallery__caption">
               Местная растительность
-              <cite>
+              <cite class="gallery__author">
                 Автор фото: Сергей
               </cite>
             </figcaption>
           </figure>
-          <span class="photos-list__likes">143</span>
+          <span class="gallery__likes">143</span>
 
         </li>
-        <li class="photos-list__item">
+        <li class="gallery__item">
 
-          <figure class="photos-list__img">
-            <img class="" src="https://via.placeholder.com/150x150" width="150" height="150"
+          <figure class="gallery__photo">
+            <img class="gallery__img" src="https://via.placeholder.com/150x150" width="150" height="150"
               alt="фото серпантина дороги в хвойном лесу">
-            <figcaption>
+            <figcaption class="gallery__caption">
               Дорога на север
-              <cite>
+              <cite class="gallery__author">
                 Автор фото: Петр
               </cite>
             </figcaption>
           </figure>
-          <span class="photos-list__likes">96</span>
+          <span class="gallery__likes">96</span>
 
         </li>
 
-        <li class="photos-list__item">
+        <li class="gallery__item">
 
-          <figure class="photos-list__img">
-            <img class="" src="https://via.placeholder.com/150x150" width="150" height="150"
+          <figure class="gallery__photo">
+            <img class="gallery__img" src="https://via.placeholder.com/150x150" width="150" height="150"
               alt="фото узкой горной тропы в каньоне">
-            <figcaption>
+            <figcaption class="gallery__caption">
               Мост дьявола
-              <cite>
+              <cite class="gallery__author">
                 Автор фото: Антон
               </cite>
             </figcaption>
           </figure>
-          <span class="photos-list__likes">254</span>
+          <span class="gallery__likes">254</span>
 
         </li>
       </ul>
+
+    </section>
+
+    <section class="video">
+
+      <h2 class="visually-hidden">Видео-презентация Седона</h2>
+
+      <p class="video__title">
+        Все еще сомневаетесь?
+      </p>
+
+      <p class="video__text">
+        Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+      </p>
+
+      <video class="video__video" controls="controls" poster="https://via.placeholder.com/150x150" height="150"
+        width="150">
+
+        <source src="https://via.placeholder.com/150x150" type="video/mp4">
+        <source src="https://via.placeholder.com/150x150" type="video/mp4">
+        Тег video не поддерживается вашим браузером.
+      </video>
 
     </section>
 
