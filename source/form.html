@@ -18,22 +18,22 @@
       <div class="nav__wrapper">
         <ul class="nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="main-button" href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button" href="photo.html">
+            <a class="site-list__link" href="photo.html">
               Фото и видео
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button">
+            <a class="site-list__link">
               Форма Отзыва
             </a>
           </li>
           <li class="site-list__item">
-            <a class="main-button" href="https://htmlacademy.ru/study">
+            <a class="site-list__link" href="https://htmlacademy.ru/study">
               HTML ACADEMY
             </a>
           </li>
@@ -53,19 +53,19 @@
     <h1 class="visually-hidden">Седона — небольшой городок в Аризоне, заслуживающий большего!
     </h1>
 
-    <section class="form">
+    <section class="review">
 
-      <h2 class="form__title">
+      <h2 class="review__title">
         Оставьте свой отзыв
       </h2>
 
-      <p class="form__text">
+      <p class="review__text">
         Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
       </p>
 
-      <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="review__form form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset>
+        <fieldset class="form__introduce" >
 
           <legend>Представьтесь:</legend>
 
@@ -80,7 +80,7 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form__contacts" >
 
           <legend>Контактная информация:</legend>
 
@@ -92,22 +92,22 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form__impression" >
 
           <legend>Ваше общее впечатление:</legend>
 
-          <input class="visually-hidden" type="radio" id="good" value="impression" checked>
+          <input class="visually-hidden" type="radio" id="good" name="impression" checked>
           <label for="good">Скорее положительное</label>
 
-          <input class="visually-hidden" type="radio" id="bad" value="impression">
+          <input class="visually-hidden" type="radio" id="bad" name="impression">
           <label for="bad">Скорее отрицательное</label>
 
-          <input class="visually-hidden" type="radio" id="indifferent" value="impression">
+          <input class="visually-hidden" type="radio" id="indifferent" name="impression">
           <label for="indifferent">Затрудняюсь ответить</label>
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form__visited" >
 
           <legend>посещенные достопримечательности:</legend>
 
@@ -125,7 +125,7 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form__textarea" >
           <legend>Опишите свои эмоции:</legend>
 
           <textarea autofocus>Опишите подробно все свои восторги
@@ -133,7 +133,7 @@
 
         </fieldset>
 
-        <button class="main-button" type="submit">Отправить отзыв</button>
+        <button class="form__button main-button" type="submit">Отправить отзыв</button>
       </form>
 
     </section>
