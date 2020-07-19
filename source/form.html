@@ -10,7 +10,7 @@
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo" href="#">
+    <a class="page-header__logo" href="index.html">
       <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="логотип city of sedona">
     </a>
 
@@ -65,70 +65,70 @@
 
       <form class="review__form form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset class="form__introduce" >
+        <fieldset class="form__fieldset">
 
-          <legend>Представьтесь:</legend>
+          <legend class="form__legend">Представьтесь:</legend>
 
-          <label for="name">Имя<sup>*</sup>:</label>
-          <input type="text" id="name" name="name" placeholder="Петр" required>
+          <label class="form__label" for="name">Имя<sup>*</sup>:</label>
+          <input class="form__input" type="text" id="name" name="name" placeholder="Петр" required>
 
-          <label for="surname">Фамилия<sup>*</sup>:</label>
-          <input type="text" id="surname" name="surname" placeholder="Иванов" required>
+          <label class="form__label" for="surname">Фамилия<sup>*</sup>:</label>
+          <input class="form__input" type="text" id="surname" name="surname" placeholder="Иванов" required>
 
-          <label for="middlename">Отчество:</label>
-          <input type="text" id="middlename" name="middlename" placeholder="Александрович">
-
-        </fieldset>
-
-        <fieldset class="form__contacts" >
-
-          <legend>Контактная информация:</legend>
-
-          <label for="tel">Контактный телефон<sup>*</sup>:</label>
-          <input type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
-
-          <label for="email">Электронная почта<sup>*</sup>:</label>
-          <input type="email" id="email" name="email" placeholder="Иванов" required>
+          <label class="form__label" for="middlename">Отчество:</label>
+          <input class="form__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
 
         </fieldset>
 
-        <fieldset class="form__impression" >
+        <fieldset class="form__fieldset" >
 
-          <legend>Ваше общее впечатление:</legend>
+          <legend class="form__legend">Контактная информация:</legend>
+
+          <label class="form__label form__label--phone" for="tel">Контактный телефон<sup>*</sup>:</label>
+          <input class="form__input" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
+
+          <label class="form__label form__label--email" for="email">Электронная почта<sup>*</sup>:</label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="Иванов" required>
+
+        </fieldset>
+
+        <fieldset class="form__fieldset" >
+
+          <legend class="form__legend">Ваше общее впечатление:</legend>
 
           <input class="visually-hidden" type="radio" id="good" name="impression" checked>
-          <label for="good">Скорее положительное</label>
+          <label class="form__label form__label--bold" for="good">Скорее положительное</label>
 
           <input class="visually-hidden" type="radio" id="bad" name="impression">
-          <label for="bad">Скорее отрицательное</label>
+          <label class="form__label form__label--bold" for="bad">Скорее отрицательное</label>
 
           <input class="visually-hidden" type="radio" id="indifferent" name="impression">
-          <label for="indifferent">Затрудняюсь ответить</label>
+          <label class="form__label form__label--bold" for="indifferent">Затрудняюсь ответить</label>
 
         </fieldset>
 
-        <fieldset class="form__visited" >
+        <fieldset class="form__fieldset" >
 
-          <legend>посещенные достопримечательности:</legend>
+          <legend class="form__legend">посещенные достопримечательности:</legend>
 
           <input class="visually-hidden" type="checkbox" id="devil-bridge" value="devil-bridge" checked>
-          <label for="devil-bridge">Мост Дьявола</label>
+          <label class="form__label form__label--bold" for="devil-bridge">Мост Дьявола</label>
 
           <input class="visually-hidden" type="checkbox" id="mountain" value="mountain" checked>
-          <label for="mountain">Гора-Колокол</label>
+          <label class="form__label form__label--bold" for="mountain">Гора-Колокол</label>
 
           <input class="visually-hidden" type="checkbox" id="slide-park" value="slide-park" checked>
-          <label for="slide-park">Слайд-парк</label>
+          <label class="form__label form__label--bold" for="slide-park">Слайд-парк</label>
 
           <input class="visually-hidden" type="checkbox" id="redrocks" value="redrocks">
-          <label for="redrocks">Красные скалы</label>
+          <label class="form__label form__label--bold" for="redrocks">Красные скалы</label>
 
         </fieldset>
 
-        <fieldset class="form__textarea" >
-          <legend>Опишите свои эмоции:</legend>
+        <fieldset class="form__fieldset" >
+          <legend class="form__legend">Опишите свои эмоции:</legend>
 
-          <textarea autofocus>Опишите подробно все свои восторги
+          <textarea class="form__input form__input--textarea" autofocus>Опишите подробно все свои восторги
           </textarea>
 
         </fieldset>
