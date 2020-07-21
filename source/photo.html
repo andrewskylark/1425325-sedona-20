@@ -5,13 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
 
   <header class="page-header">
+
     <a class="page-header__logo" href="index.html">
-      <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="логотип city of sedona">
+      <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
     </a>
 
     <nav class="nav">
@@ -44,7 +47,8 @@
 
     </nav>
 
-    <p class="header__title title">Sedona</p>
+    <img class="page-header__sedona" src="img/text-sedona.svg" width="229" height="39"
+      alt="Sedona - welcome to the gorgeous">
 
   </header>
 
@@ -66,7 +70,7 @@
         <li class="gallery__item">
 
           <figure class="gallery__photo">
-            <img class="gallery__photo" src="https://via.placeholder.com/150x150" width="150" height="150"
+            <img class="gallery__photo" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280"
               alt="фото дороги на рассвете">
             <figcaption class="gallery__caption">
               неродные просторы
@@ -82,7 +86,7 @@
         <li class="gallery__item">
 
           <figure class="gallery__photo">
-            <img class="gallery__img" src="https://via.placeholder.com/150x150" width="150" height="150"
+            <img class="gallery__img" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280"
               alt="фото кактуса на фоне гор в Седоне">
             <figcaption class="gallery__caption">
               Местная растительность
@@ -97,7 +101,7 @@
         <li class="gallery__item">
 
           <figure class="gallery__photo">
-            <img class="gallery__img" src="https://via.placeholder.com/150x150" width="150" height="150"
+            <img class="gallery__img" src="img/photo-roads-mobile@1x.jpg" width="280" height="280"
               alt="фото серпантина дороги в хвойном лесу">
             <figcaption class="gallery__caption">
               Дорога на север
@@ -113,7 +117,7 @@
         <li class="gallery__item">
 
           <figure class="gallery__photo">
-            <img class="gallery__img" src="https://via.placeholder.com/150x150" width="150" height="150"
+            <img class="gallery__img" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280"
               alt="фото узкой горной тропы в каньоне">
             <figcaption class="gallery__caption">
               Мост дьявола
@@ -127,30 +131,28 @@
         </li>
       </ul>
 
+      <div class="gallery__presentation">
+
+        <h2 class="visually-hidden">Видео-презентация Седона</h2>
+
+        <p class="gallery__title">
+          Все еще сомневаетесь?
+        </p>
+
+        <p class="gallery__text">
+          Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+        </p>
+
+        <video class="gallery__video" controls="controls" poster="img/video-mobile@1x.jpg" width="320" height="201">
+
+          <source src="https://via.placeholder.com/150x150" type="video/mp4">
+          <source src="https://via.placeholder.com/150x150" type="video/mp4">
+          Тег video не поддерживается вашим браузером.
+        </video>
+
+      </div>
+
     </section>
-
-    <section class="video">
-
-      <h2 class="visually-hidden">Видео-презентация Седона</h2>
-
-      <p class="video__title">
-        Все еще сомневаетесь?
-      </p>
-
-      <p class="video__text">
-        Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
-      </p>
-
-      <video class="video__video" controls="controls" poster="https://via.placeholder.com/150x150" height="150"
-        width="150">
-
-        <source src="https://via.placeholder.com/150x150" type="video/mp4">
-        <source src="https://via.placeholder.com/150x150" type="video/mp4">
-        Тег video не поддерживается вашим браузером.
-      </video>
-
-    </section>
-
   </main>
 
   <footer class="page-footer">
@@ -174,14 +176,10 @@
       </li>
     </ul>
 
-    <div class="page-footer__dev dev">
-      <p class="dev__text">
-        Разработано
-      </p>
-      <a class="dev__logo-link" href="https://htmlacademy.ru/intensive/adaptive"
-        aria-label="разработчик: html академия">
-      </a>
-    </div>
+    <a class="page-footer__dev" href="https://htmlacademy.ru/intensive/adaptive"
+      aria-label="разработчик: html академия">Разработано
+    </a>
+
   </footer>
 
 </body>

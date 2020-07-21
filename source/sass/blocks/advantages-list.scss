@@ -1,0 +1,28 @@
+.advantages-list__item {
+  padding-top: 25px;
+  padding-bottom: 24px;
+  background-color: var(--list-main);
+  border-bottom: 1px solid #D6D6D6;
+  &--accent {
+    padding-top: 39px;
+    padding-bottom: 0;
+    color: var(--text-accent);
+    background-color: var(--main);
+    border-bottom: none;
+  }
+}
+
+.advantages-list__title {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-list__N,
+.advantages-list__description {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+}

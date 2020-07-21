@@ -5,13 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
 
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="логотип city of sedona">
+      <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
     </a>
 
     <nav class="nav">
@@ -44,7 +46,8 @@
 
     </nav>
 
-    <p class="header__title title">Sedona</p>
+    <img class="page-header__sedona" src="img/text-sedona.svg" width="229" height="39"
+      alt="Sedona - welcome to the gorgeous">
 
   </header>
 
@@ -80,7 +83,7 @@
 
         </fieldset>
 
-        <fieldset class="form__fieldset" >
+        <fieldset class="form__fieldset">
 
           <legend class="form__legend">Контактная информация:</legend>
 
@@ -92,7 +95,7 @@
 
         </fieldset>
 
-        <fieldset class="form__fieldset" >
+        <fieldset class="form__fieldset">
 
           <legend class="form__legend">Ваше общее впечатление:</legend>
 
@@ -107,7 +110,7 @@
 
         </fieldset>
 
-        <fieldset class="form__fieldset" >
+        <fieldset class="form__fieldset">
 
           <legend class="form__legend">посещенные достопримечательности:</legend>
 
@@ -125,7 +128,7 @@
 
         </fieldset>
 
-        <fieldset class="form__fieldset" >
+        <fieldset class="form__fieldset">
           <legend class="form__legend">Опишите свои эмоции:</legend>
 
           <textarea class="form__input form__input--textarea" autofocus>Опишите подробно все свои восторги
@@ -161,14 +164,10 @@
       </li>
     </ul>
 
-    <div class="page-footer__dev dev">
-      <p class="dev__text">
-        Разработано
-      </p>
-      <a class="dev__logo-link" href="https://htmlacademy.ru/intensive/adaptive"
-        aria-label="разработчик: html академия">
-      </a>
-    </div>
+    <a class="page-footer__dev" href="https://htmlacademy.ru/intensive/adaptive"
+      aria-label="разработчик: html академия">Разработано
+    </a>
+
   </footer>
 
 </body>

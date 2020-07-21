@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --main: #81B3D2;
+  --text-main: #000000;
+  --text-accent: #FFFFFF;
+  --list-main: #eeeeee;
+}
+
+.page {
+  font-family: "PTSans", "Tahoma", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
