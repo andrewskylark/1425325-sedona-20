@@ -1,23 +1,23 @@
 @font-face {
   font-family: "PTSans";
   src: url("../fonts/ptsans.woff2") format("woff2"),
-        url("../fonts/ptsans.woff") format("woff");
-        font-weight: normal;
-        font-style: normal;
+    url("../fonts/ptsans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "PTSans";
   src: url("../fonts/ptsansbold.woff2") format("woff2"),
-        url("../fonts/ptsansbold.woff") format("woff");
+    url("../fonts/ptsansbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 :root {
-  --main: #81B3D2;
+  --main: #81b3d2;
   --text-main: #000000;
-  --text-accent: #FFFFFF;
+  --text-accent: #ffffff;
   --list-main: #eeeeee;
 }
 

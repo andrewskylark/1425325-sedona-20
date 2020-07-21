@@ -25,21 +25,23 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 27px;
-      height: 35px;
-      background-image: url(../img/logo-htmlacademy.svg);
-      background-repeat: no-repeat;
-    }
-    &:hover::after,
-    &:focus::after {
-      background-image: url(../img/htmlacademy-hover.svg);
-    }
-    &:active::after {
-      background-image: url(../img/logo-htmlacademy.svg);
-      opacity: 0.3;
-    }
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 35px;
+    background-image: url("../img/logo-htmlacademy.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../img/htmlacademy-hover.svg");
+  }
+
+  &:active::after {
+    background-image: url("../img/logo-htmlacademy.svg");
+    opacity: 0.3;
+  }
 }

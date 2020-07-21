@@ -38,7 +38,6 @@
 .gallery__caption {
   display: block;
   font-weight: bold;
-
 }
 
 .gallery__author {
@@ -52,6 +51,7 @@
   position: relative;
   font-weight: bold;
   padding-left: 38px;
+
   &::before {
     content: "";
     position: absolute;
@@ -60,11 +60,10 @@
     transform: translateY(-50%);
     width: 23px;
     height: 21px;
-    background-image: url(../img/icon-like.svg);
+    background-image: url("../img/icon-like.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
   }
-
 }
 
 .gallery__presentation {
