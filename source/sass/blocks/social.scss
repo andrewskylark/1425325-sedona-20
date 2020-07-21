@@ -15,14 +15,13 @@
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-
   &--twitter {
-    background-image: url(../img/twitter.svg);
+    background-image: url("../img/twitter.svg");
   }
   &--fb {
-    background-image: url(../img/facebook.svg);
+    background-image: url("../img/facebook.svg");
   }
   &--youtube {
-    background-image: url(../img/youtube.svg);
+    background-image: url("../img/youtube.svg");
   }
 }
