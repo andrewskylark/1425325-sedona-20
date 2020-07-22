@@ -1,0 +1,103 @@
+.form {
+  padding-top: 20px;
+}
+
+.review__text {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form__fieldset {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+
+    &:last-of-type {
+      border-bottom: none;
+  }
+}
+
+.form__label {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 26px;
+
+    &--bold {
+      text-transform: initial;
+      font-size: 18px;
+      font-weight: bold;
+    }
+}
+
+.form__input {
+  position: relative;
+  padding: 18px 22px 14px 22px;
+  background-color: var(--input);
+  border: none;
+
+    &::placeholder,
+    &--textarea {
+      color: var(--text-main);
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 26px;
+    }
+}
+//* галки и чекбоксы сделал стилями - лучше, чем грузить свг?
+//*не уверен, что эти страшные конструкции можно поместить внутрь препроцессоров
+//*позиционоровать буду вместе с сетками
+input[type=radio]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: var(--text-main);
+  border: 3px solid var(--text-main);
+  border-radius: 50%;
+}
+
+input[type=radio] + label:before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--input);
+  border: 5px solid var(--input);
+  border-radius: 50%;
+}
+
+input[type=checkbox]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(-45deg);
+  width: 18px;
+  height: 9px;
+  border-left: 3px solid var(--text-main);
+  border-bottom: 3px solid var(--text-main);
+
+}
+
+input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--input);
+  border: 5px solid var(--input);
+  border-radius: 10%;
+}
+
+
+
+

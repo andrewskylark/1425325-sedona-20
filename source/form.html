@@ -57,11 +57,11 @@
 
     <section class="review">
 
-      <h2 class="review__title">
+      <h2 class="review__title title">
         Оставьте свой отзыв
       </h2>
 
-      <p class="review__text">
+      <p class="review__text text">
         Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
       </p>
 
@@ -69,34 +69,33 @@
 
         <fieldset class="form__fieldset">
 
-          <legend class="form__legend">Представьтесь:</legend>
+          <legend class="form__legend title">Представьтесь:</legend>
 
-          <label class="form__label" for="name">Имя<sup>*</sup>:</label>
+          <label class="form__label" for="name">Имя*:
           <input class="form__input" type="text" id="name" name="name" placeholder="Петр" required>
-
-          <label class="form__label" for="surname">Фамилия<sup>*</sup>:</label>
+        </label>
+          <label class="form__label" for="surname">Фамилия*:
           <input class="form__input" type="text" id="surname" name="surname" placeholder="Иванов" required>
-
-          <label class="form__label" for="middlename">Отчество:</label>
+        </label>
+          <label class="form__label" for="middlename">Отчество:
           <input class="form__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
+        </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+
+          <legend class="form__legend title">Контактная информация:</legend>
+
+          <label class="form__label form__label--phone" for="tel">Контактный телефон*:</label>
+          <input class="form__input form__input--phone" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
+          <label class="form__label" for="email">Электронная почта*:</label>
+          <input class="form__input form__input--email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
 
         </fieldset>
 
         <fieldset class="form__fieldset">
 
-          <legend class="form__legend">Контактная информация:</legend>
-
-          <label class="form__label form__label--phone" for="tel">Контактный телефон<sup>*</sup>:</label>
-          <input class="form__input" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
-
-          <label class="form__label form__label--email" for="email">Электронная почта<sup>*</sup>:</label>
-          <input class="form__input" type="email" id="email" name="email" placeholder="Иванов" required>
-
-        </fieldset>
-
-        <fieldset class="form__fieldset">
-
-          <legend class="form__legend">Ваше общее впечатление:</legend>
+          <legend class="form__legend title">Ваше общее впечатление:</legend>
 
           <input class="visually-hidden" type="radio" id="good" name="impression" checked>
           <label class="form__label form__label--bold" for="good">Скорее положительное</label>
@@ -111,7 +110,7 @@
 
         <fieldset class="form__fieldset">
 
-          <legend class="form__legend">посещенные достопримечательности:</legend>
+          <legend class="form__legend title">посещенные достопримечательности:</legend>
 
           <input class="visually-hidden" type="checkbox" id="devil-bridge" value="devil-bridge" checked>
           <label class="form__label form__label--bold" for="devil-bridge">Мост Дьявола</label>
@@ -128,7 +127,7 @@
         </fieldset>
 
         <fieldset class="form__fieldset">
-          <legend class="form__legend">Опишите свои эмоции:</legend>
+          <legend class="form__legend title">Опишите свои эмоции:</legend>
 
           <textarea class="form__input form__input--textarea" autofocus>Опишите подробно все свои восторги
           </textarea>

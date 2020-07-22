@@ -19,11 +19,17 @@
   --text-main: #000000;
   --text-accent: #ffffff;
   --list-main: #eeeeee;
+  --input: #e2e2e2;
 }
 
 .page {
   font-family: "PTSans", "Tahoma", sans-serif;
-  background-color: #81b3d2;
+}
+
+.page ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -37,8 +43,35 @@
   padding: 0;
 }
 
+.title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+    &--bigger {
+      font-size: 21px;
+      line-height: 26px;
+    }
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+
+    &--bigger {
+      line-height: 26px;
+    }
+}
+
 .main-button {
-  min-height: 58px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
   color: var(--text-accent);
   text-transform: uppercase;
   background-color: var(--main);
