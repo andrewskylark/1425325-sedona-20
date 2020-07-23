@@ -5,25 +5,14 @@
 }
 
 .page-footer__hashtag {
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  padding: 0;
-  margin: 0;
-}
-
-.page-footer__social {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .page-footer__dev {
   position: relative;
   color: var(--text-main);
-  text-transform: uppercase;
-  font-size: 14px;
   line-height: 26px;
 
   &::after {

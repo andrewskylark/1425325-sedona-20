@@ -10,8 +10,8 @@
   border: none;
   border-bottom: 1px solid #e5e5e5;
 
-    &:last-of-type {
-      border-bottom: none;
+  &:last-of-type {
+    border-bottom: none;
   }
 }
 
@@ -21,11 +21,11 @@
   font-size: 14px;
   line-height: 26px;
 
-    &--bold {
-      text-transform: initial;
-      font-size: 18px;
-      font-weight: bold;
-    }
+  &--bold {
+    text-transform: initial;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
 
 .form__input {
@@ -34,18 +34,18 @@
   background-color: var(--input);
   border: none;
 
-    &::placeholder,
-    &--textarea {
-      color: var(--text-main);
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 26px;
-    }
+  &::placeholder,
+  &--textarea {
+    color: var(--text-main);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 //* галки и чекбоксы сделал стилями - лучше, чем грузить свг?
 //*не уверен, что эти страшные конструкции можно поместить внутрь препроцессоров
 //*позиционоровать буду вместе с сетками
-input[type=radio]:checked + label:after {
+.form__input[type="radio"]:checked + .form__label::after {
   content: "";
   position: absolute;
   left: 0;
@@ -58,7 +58,7 @@ input[type=radio]:checked + label:after {
   border-radius: 50%;
 }
 
-input[type=radio] + label:before {
+.form__input[type="radio"] + .form__label::before {
   content: "";
   position: absolute;
   width: 48px;
@@ -71,21 +71,19 @@ input[type=radio] + label:before {
   border-radius: 50%;
 }
 
-input[type=checkbox]:checked + label:after {
+.form__input[type="checkbox"]:checked + .form__label::after {
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
   transform: rotate(-45deg);
   width: 18px;
   height: 9px;
   border-left: 3px solid var(--text-main);
   border-bottom: 3px solid var(--text-main);
-
 }
 
-input[type=checkbox] + label:before {
+.form__input[type="checkbox"] + .form__label::before {
   content: "";
   position: absolute;
   width: 46px;
@@ -97,7 +95,3 @@ input[type=checkbox] + label:before {
   border: 5px solid var(--input);
   border-radius: 10%;
 }
-
-
-
-
