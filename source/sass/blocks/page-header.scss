@@ -1,8 +1,45 @@
 .page-header {
-  text-align: center;
   background-image: url("../img/bg-intro-triangle-mobile.svg"),
     url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-color: lightblue;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 320px;
+  outline: 1px solid red;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.nav {
+  align-self: stretch;
+}
+
+.page-header__logo {
+  height: 84px;
+  order: 1;
+
+  @media screen and (min-width: 768px) {
+    height: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 97px;
+  }
+}
+
+.page-header__sedona {
+  order: 2;
 }

@@ -14,15 +14,29 @@
   font-style: normal;
 }
 
-:root {
-  --main: #81b3d2;
-  --text-main: #000000;
-  --text-accent: #ffffff;
-  --list-main: #eeeeee;
-  --input: #e2e2e2;
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.page__body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .page {
+  height: 100%;
   font-family: "PTSans", "Tahoma", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -32,17 +46,6 @@
 .ul-clear {
   list-style: none;
   margin: 0;
-  padding: 0;
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
   padding: 0;
 }
 
