@@ -1,5 +1,21 @@
 .review {
+  min-width: 320px;
   padding-top: 36px;
   padding-bottom: 48px;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+.review__text {
+  border-bottom: 1px solid #e5e5e5;
 }

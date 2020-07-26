@@ -1,0 +1,9 @@
+.contacts__input {
+  width: 100%;
+}
+
+.contacts {
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / -1;
+  }
+}
