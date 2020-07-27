@@ -10,14 +10,10 @@
 
 <body class="page__body">
 
-  <header class="page-header page-header__wrapper">
+  <header class="page-header">
 
-    <a class="page-header__logo" href="index.html">
-      <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
-    </a>
+    <nav class="page-header__nav nav">
 
-    <nav class="nav">
-      <div class="nav__wrapper">
         <ul class="nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link" href="index.html">
@@ -39,8 +35,12 @@
               HTML ACADEMY
             </a>
           </li>
+          <li class="site-list__item">
+            <a class="page-header__logo" href="index.html" aria-label="логотип сайта Седона и ссылка на главную">
+              <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
+            </a>
+          </li>
         </ul>
-      </div>
 
       <button class="nav__toggle" type="button" aria-label="открыть/закрыть меню"></button>
 
@@ -67,7 +67,6 @@
 
       <ul class="gallery__list ul-clear">
         <li class="gallery__item">
-
           <figure class="gallery__photo">
             <img class="gallery__img" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280"
               alt="фото дороги на рассвете">
@@ -76,15 +75,12 @@
               <cite class="gallery__author">
                 Автор фото: Борис
               </cite>
-              <span class="gallery__likes">1350</span>
+              <span class="gallery__likes" aria-label="количество лайков под фото">1350</span>
             </figcaption>
           </figure>
-
-
         </li>
 
         <li class="gallery__item">
-
           <figure class="gallery__photo">
             <img class="gallery__img" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280"
               alt="фото кактуса на фоне гор в Седоне">
@@ -93,14 +89,12 @@
               <cite class="gallery__author">
                 Автор фото: Сергей
               </cite>
-              <span class="gallery__likes">143</span>
+              <span class="gallery__likes" aria-label="количество лайков под фото">143</span>
             </figcaption>
           </figure>
-
-
         </li>
-        <li class="gallery__item">
 
+        <li class="gallery__item">
           <figure class="gallery__photo">
             <img class="gallery__img" src="img/photo-roads-mobile@1x.jpg" width="280" height="280"
               alt="фото серпантина дороги в хвойном лесу">
@@ -109,15 +103,12 @@
               <cite class="gallery__author">
                 Автор фото: Петр
               </cite>
-              <span class="gallery__likes">96</span>
+              <span class="gallery__likes" aria-label="количество лайков под фото">96</span>
             </figcaption>
           </figure>
-
-
         </li>
 
         <li class="gallery__item">
-
           <figure class="gallery__photo">
             <img class="gallery__img" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280"
               alt="фото узкой горной тропы в каньоне">
@@ -126,12 +117,11 @@
               <cite class="gallery__author">
                 Автор фото: Антон
               </cite>
-              <span class="gallery__likes">254</span>
+              <span class="gallery__likes" aria-label="количество лайков под фото">254</span>
             </figcaption>
           </figure>
-
-
         </li>
+
       </ul>
 
       <div class="gallery__presentation">

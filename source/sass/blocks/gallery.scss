@@ -47,6 +47,7 @@
 }
 
 .gallery__photo {
+  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -63,7 +64,9 @@
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: -80px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     color: var(--text-accent);
     background-color: rgba(0, 0, 0, 0.3);
   }
@@ -101,12 +104,12 @@
     transform: translateY(-50%);
     width: 23px;
     height: 21px;
-    background-image: url("../../img/icon-like.svg");
+    background-image: url("../img/icon-like.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
 
     @media screen and (min-width: 1200px) {
-      background-image: url("../../img/icon-like-white.svg");
+      background-image: url("../img/icon-like-white.svg");
       opacity: 1;
     }
   }
@@ -114,4 +117,8 @@
 
 .gallery__presentation {
   padding-top: 32px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 800px;
+  }
 }

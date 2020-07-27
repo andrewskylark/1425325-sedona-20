@@ -5,9 +5,6 @@
   }
 }
 
-// грид с 3 колоннами, строки как лягут, либо потом задам высоту на микросетках
-// 2 первых элемента accent - другие цвета и свои микрогриды, фотки спозиционировал ниже
-// на десктопе пока не очень, но там будут длинные фотки, лягут по ширине
 .advantages-list__item {
   padding-top: 25px;
   padding-bottom: 24px;
@@ -23,24 +20,20 @@
     color: var(--text-accent);
     background-color: var(--main);
     border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media screen and (min-width: 768px) {
       display: grid;
       grid-template-columns: 33.3333% 33.3333% 33.3333%;
+      grid-column: 1 / -1;
     }
-  }
-
-  &:first-child {
-    grid-column: 1 / -1;
-  }
-
-  &:nth-child(2) {
-    grid-row: 2;
-    grid-column: 1 / -1;
   }
 }
 // позиционирование списка в списке
 .advantages-list__real-city {
+  align-self: stretch;
   grid-row: 2;
   grid-column: 1 / -1;
 }
