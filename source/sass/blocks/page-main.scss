@@ -1,11 +1,28 @@
 .page-main {
   text-align: center;
-  color: var(--text-main);
-  padding-top: 50px;
+  color: $text-main;
+  padding-top: 32px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 44px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 55px;
+  }
 }
 
 .page-main__title {
+  display: block;
+  width: 280px;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    font-size: 21px;
+    width: 480px;
+  }
 }
 
 .page-main__wrapper {

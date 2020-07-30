@@ -4,49 +4,152 @@
   align-items: center;
   margin: 0 auto;
   min-width: 320px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+// тут куча разных высот хэдэра по страницам и размеру экрана
+// и лого внутри меняется - долго копался и сделал дивом с бэкграундом и заал адаптисные высоты
+.page-header__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 158px;
   background-image: url("../img/bg-intro-triangle-mobile.svg"),
     url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-color: lightblue;
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
-}
-
-.page-header__sedona {
-  margin-top: 52px;
-  margin-bottom: 67px;
+  z-index: -1;
 
   &--index {
-    margin-top: 90px;
-    margin-bottom: 91px;
+    height: 389px;
+  }
 
-    @media screen and (min-width: 768px) {
-      margin-top: 77px;
-      margin-bottom: 91px;
+  @media screen and (min-width: 768px) {
+    height: 290px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"),
+      url("../img/bg-back-desktop@1x.jpg");
+
+    &--index {
+      height: 518px;
     }
+  }
 
-    @media screen and (min-width: 768px) {
-      margin-top: 95px;
-      margin-bottom: 117px;
+  @media screen and (min-width: 1200px) {
+    height: 301px;
+
+    &--index {
+      height: 518px;
     }
   }
 }
 
 .nav {
+  position: relative;
   align-self: stretch;
 }
 
 .page-header__logo {
+  display: block;
   height: 84px;
+  z-index: 10;
+  margin-bottom: -34px;
 
   @media screen and (min-width: 1200px) {
     height: 97px;
   }
 }
+// кнопка открыть/закрыть мобильное меню
+.nav--closed .nav__toggle {
+  position: absolute;
+  bottom: 18px;
+  right: 6%;
+  width: 23px;
+  height: 22px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 4px;
+    background-color: $main;
+    box-shadow: 0 8px 0 0 $main,
+      0 16px 0 0 $main;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.nav--opened .nav__toggle {
+  position: absolute;
+  top: 18px;
+  right: 6%;
+  width: 23px;
+  height: 23px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+    width: 30px;
+    height: 4px;
+    background-color: $text-accent;
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.6;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav--closed .site-list__item:not(:last-child) {
+    display: none;
+  }
+}
+
+.nav--no-js .nav__toggle {
+  display: none;
+}
+
+.nav--no-js .site-list__item {
+  display: block;
+}
 
 .nav__toggle {
-  display: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }

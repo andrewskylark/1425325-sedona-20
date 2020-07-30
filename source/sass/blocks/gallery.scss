@@ -1,23 +1,54 @@
+// думаю, неплохо на мобильном сделать резину,
+// чтобы максимально использовать вьюпорт
+// пока картинкам дал 100% ширины, дальше научат адаптировать графику
 .gallery {
-  width: 320px;
+  min-width: 320px;
   padding-top: 32px;
   line-height: 24px;
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
     width: 768px;
+    padding-top: 65px;
     padding-left: 60px;
     padding-right: 60px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
+    padding-top: 105px;
     padding-left: 0;
     padding-right: 0;
   }
 }
-// грид на 2 и 3 колонки по ширине экрана, фото лежат на своих местах,
-// но пока загружены только мобильные фото
+
+.gallery__title {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+.gallery__text {
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+  padding-bottom: 40px;
+
+  &:first-of-type {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 70px;
+    border-bottom: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 77px;
+  }
+}
+
 // под img какй-то отспут, в дев тулз не нашел что дает, img figcaption обнулил паддинги
 .gallery__list {
   @media screen and (min-width: 768px) {
@@ -32,8 +63,9 @@
 
 .gallery__item {
   padding-top: 22px;
+  padding-left: 6.25%;
+  padding-right: 6.25%;
   padding-bottom: 15px;
-  text-align: left;
   border-bottom: 1px solid #e5e5e5;
 
   @media screen and (min-width: 768px) {
@@ -52,9 +84,14 @@
   padding: 0;
 }
 
+.gallery__img {
+  width: 100%;
+}
+
 .gallery__caption {
   position: relative;
   display: block;
+  text-align: left;
   font-weight: bold;
 
   @media screen and (min-width: 768px) {

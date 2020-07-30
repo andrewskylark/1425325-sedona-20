@@ -12,7 +12,7 @@
 
   <header class="page-header">
 
-    <nav class="nav">
+    <nav class="nav nav--closed nav--no-js">
 
       <ul class="nav__list site-list">
         <li class="site-list__item site-list__item--active">
@@ -42,13 +42,14 @@
         </li>
       </ul>
 
-      <button class="nav__toggle" type="button" aria-label="открыть/закрыть меню"></button>
+      <button class="nav__toggle" type="button" aria-label="открыть или закрыть меню"></button>
 
     </nav>
 
-    <img class="page-header__sedona page-header__sedona--index" src="img/text-sedona-index.svg" width="282" height="214"
-      alt="Sedona - welcome to the gorgeous">
-
+    <div class="page-header__background page-header__background--index">
+      <img class="page-header__sedona page-header__sedona--index" src="img/text-sedona-index.svg" width="282"
+        height="214" alt="Sedona - welcome to the gorgeous">
+    </div>
   </header>
 
   <main class="page-main">
@@ -63,7 +64,7 @@
 
       <ul class="advantages__list advantages-list ul-clear">
         <li class="advantages-list__item advantages-list__item--accent">
-          <div class="test">
+          <div class="advantages-list__item-microgrid advantages-list__item-microgrid--triangle">
             <h3 class="advantages-list__title title">
               Настоящий городок
             </h3>
@@ -75,8 +76,8 @@
             </p>
           </div>
 
-          <img class="advantages-list__img advantages-list__img--real-city" src="img/main-city-mobile@1x.jpg" width="520" height="260"
-            alt="фото города Седона">
+          <img class="advantages-list__img advantages-list__img--real-city" src="img/main-city-mobile@1x.jpg"
+            width="320" height="260" alt="фото города Седона">
 
           <ul class="advantages-list__real-city  real-city-list ul-clear">
             <li class="real-city-list__item real-city-list__item--home">
@@ -108,7 +109,7 @@
         </li>
 
         <li class="advantages-list__item advantages-list__item--accent">
-          <div class="test">
+          <div class="advantages-list__item-microgrid">
 
             <h3 class="advantages-list__title title">
               Там есть мост дьявола
@@ -121,8 +122,8 @@
             </p>
           </div>
 
-          <img class="advantages-list__img advantages-list__img--bridge" src="img/photo-bridge-mobile@1x.jpg" width="520" height="260"
-            alt="фото моста дьявола в Седоне">
+          <img class="advantages-list__img advantages-list__img--bridge" src="img/photo-bridge-mobile@1x.jpg"
+            width="320" height="260" alt="фото моста дьявола в Седоне">
 
 
         </li>
@@ -218,7 +219,7 @@
     </a>
 
   </footer>
-
+<script src="js/nav-mobile.js"></script>
 </body>
 
 </html>
