@@ -1,31 +1,29 @@
-// думаю, неплохо на мобильном сделать резину,
-// чтобы максимально использовать вьюпорт
-// пока картинкам дал 100% ширины, дальше научат адаптировать графику
 .gallery {
   min-width: 320px;
-  padding-top: 32px;
   line-height: 24px;
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    padding-top: 65px;
+    padding-top: 21px;
     padding-left: 60px;
     padding-right: 60px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    padding-top: 105px;
+    padding-top: 53px;
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 .gallery__title {
-  margin-bottom: 30px;
+  margin-top: -8px;
+  margin-bottom: 27px;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 33px;
     font-size: 30px;
   }
 }
@@ -36,16 +34,24 @@
   padding-bottom: 40px;
 
   &:first-of-type {
+    width: 520px;
+    margin: 0 auto 40px auto;
+    padding-bottom: 44px;
     border-bottom: 1px solid #e5e5e5;
+
+    @media screen and (min-width: 768px) {
+      border-bottom: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 440px;
+      padding: 0 0 35px 0;
+      margin-bottom: 45px;
+    }
   }
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 70px;
     border-bottom: none;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 77px;
   }
 }
 
@@ -62,19 +68,40 @@
 }
 
 .gallery__item {
+  min-height: 415px;
   padding-top: 22px;
   padding-left: 6.25%;
   padding-right: 6.25%;
   padding-bottom: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $capture;
 
   @media screen and (min-width: 768px) {
+    min-height: 267px;
     border-bottom: none;
     padding: 0;
-  }
 
-  &:first-child {
-    grid-column: 1 / -1;
+    &:first-child {
+      height: 480px;
+      grid-column: 1 / -1;
+
+      .gallery__img {
+        height: 400px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        height: 400px;
+      }
+    }
+    // у каждой нечетной карточки (кроме первой) темная заливка фигкапчи на планшете
+    &:nth-child(odd):not(:first-child) {
+      .gallery__caption {
+        background-color: $capture-accent;
+
+        @media screen and (min-width: 1200px) {
+          background-color: initial;
+        }
+      }
+    }
   }
 }
 
@@ -85,10 +112,17 @@
 }
 
 .gallery__img {
+  display: block;
   width: 100%;
+  max-height: 280px;
+
+  @media screen and (min-width: 768px) {
+    max-height: 267px;
+  }
 }
 
 .gallery__caption {
+  padding-top: 3px;
   position: relative;
   display: block;
   text-align: left;
@@ -96,7 +130,7 @@
 
   @media screen and (min-width: 768px) {
     min-height: 80px;
-    padding-left: 20px;
+    padding: 15px 15px 0 20px;
     background-color: #f2f2f2;
   }
 
@@ -104,18 +138,15 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    color: var(--text-accent);
-    background-color: rgba(0, 0, 0, 0.3);
+    color: $text-accent;
+    background-color: rgba($text-main, 0.3);
   }
-}
-// у третьей карточки у figcaption (скорее у всех нечетных, кроме первой)
-// другой фон, но как не извращался селекторами не смог зацепить
-.gallery__list .gallery__caption:nth-of-type(3) {
-  background-color: #eaeaea;
 }
 
 .gallery__author {
   display: block;
+  margin-top: 1px;
+  margin-bottom: 12px;
   font-weight: normal;
   font-style: initial;
   text-transform: initial;
@@ -128,7 +159,7 @@
 
   @media screen and (min-width: 768px) {
     position: absolute;
-    right: 25px;
+    right: 29px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -153,9 +184,28 @@
 }
 
 .gallery__presentation {
-  padding-top: 32px;
+  padding-top: 40px;
+
+  .gallery__text {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 65px;
+  }
 
   @media screen and (min-width: 1200px) {
     max-width: 800px;
+  }
+}
+
+.gallery__video {
+  padding-bottom: 66px;
+  margin-bottom: 49px;
+
+  @media screen and (min-width: 786px) {
+    padding-bottom: 0;
+    margin-bottom: 40px;
   }
 }
