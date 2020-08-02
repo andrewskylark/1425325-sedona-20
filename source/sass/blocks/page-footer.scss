@@ -4,18 +4,16 @@
   justify-content: space-between;
   align-items: center;
   width: 320px;
-  min-height: 243px;
+  min-height: 235px;
   margin: 0 auto;
-  padding-top: 38px;
+  padding-top: 33px;
   padding-bottom: 26px;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
     width: 768px;
     min-height: 120px;
-    padding: 0;
-    padding-left: 45px;
-    padding-right: 60px;
+    padding: 0 7%;
   }
 
   @media screen and (min-width: 1200px) {

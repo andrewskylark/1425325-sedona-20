@@ -4,8 +4,8 @@
   margin: 0;
 
   @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
     min-height: 56px;
     background-color: white;
@@ -13,27 +13,31 @@
 }
 
 .site-list__item {
+  margin-bottom: 1px;
   text-align: center;
 
-  &:first-child {
-    order: -3;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
   }
 
-  &:nth-child(2) {
-    order: -2;
+  &:nth-last-of-type(2) {
+    margin-bottom: 0;
   }
-
+  // li  c логотипом и тень навигации
   &:last-child {
+    margin-bottom: 0;
     height: 56px;
-    background-color: var(--text-accent);
-    margin-bottom: -27px;
+    background-color: $text-accent;
+    box-shadow: 0 -3px 6px 2px rgba(0, 0, 0, 0.2);
 
     @media screen and (min-width: 768px) {
-      order: -1;
+      grid-row: 1;
+      grid-column: 3;
+      box-shadow: none;
     }
   }
 }
-
+// ссылки навигации
 .site-list__link {
   display: block;
   padding-top: 10px;
@@ -42,21 +46,42 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
-  color: var(--text-accent);
-  background-color: var(--main);
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: white;
+  background-color: $main;
+  box-shadow: 0 -1px 1px 1px rgba(1, 1, 1, 0.2),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+
+  &[href]:hover,
+  &[href]:focus {
+    background-color: $main-hover;
+  }
+
+  &[href]:active {
+    color: rgba($text-accent, 0.6);
+    background-color: $main-active;
+  }
 
   @media screen and (min-width: 768px) {
-    color: var(--main-text);
-    background-color: white;
+    padding-top: 15px;
+    font-size: 14px;
+    line-height: 26px;
+    color: $text-main;
+    background-color: $text-accent;
     box-shadow: none;
     min-width: 153px;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $main;
+      background-color: $text-accent;
+    }
+
+    &[href]:active {
+      color: rgba($text-main, 0.3);
+    }
   }
 
   @media screen and (min-width: 1200px) {
-    color: var(--main-text);
-    background-color: white;
-    box-shadow: none;
     min-width: 239px;
   }
 }

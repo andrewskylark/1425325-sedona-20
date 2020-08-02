@@ -12,43 +12,44 @@
 
   <header class="page-header">
 
-    <nav class="page-header__nav nav">
+    <nav class="page-header__nav nav nav--closed nav--no-js">
 
-        <ul class="nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link">
-              Фото и видео
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
-              Форма Отзыва
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/study">
-              HTML ACADEMY
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="page-header__logo" href="index.html" aria-label="логотип сайта Седона и ссылка на главную">
-              <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
-            </a>
-          </li>
-        </ul>
+      <ul class="nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a class="site-list__link" href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link">
+            Фото и видео
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">
+            Форма Отзыва
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="https://htmlacademy.ru/study">
+            HTML ACADEMY
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="page-header__logo" href="index.html" aria-label="логотип сайта Седона и ссылка на главную">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
+          </a>
+        </li>
+      </ul>
 
       <button class="nav__toggle" type="button" aria-label="открыть/закрыть меню"></button>
 
     </nav>
 
-    <img class="page-header__sedona" src="img/text-sedona.svg" width="229" height="39"
-      alt="Sedona - welcome to the gorgeous">
-
+    <div class="page-header__background">
+      <img class="page-header__sedona" src="img/text-sedona.svg" width="229" height="39"
+        alt="Sedona - welcome to the gorgeous">
+    </div>
   </header>
 
   <main class="page-main">
@@ -174,7 +175,7 @@
     </a>
 
   </footer>
-
+  <script src="js/nav-mobile.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@
   padding-right: 20px;
 
   @media screen and (min-width: 768px) {
+    padding-top: 57px;
     padding-left: 155px;
     padding-right: 155px;
   }
@@ -14,6 +15,42 @@
   }
 }
 
-.find-hotel__text {
+.find-hotel__title {
+  margin-bottom: 22px;
   line-height: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+}
+
+.find-hotel__text {
+  margin-bottom: 28px;
+  line-height: 24px;
+
+  br {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 39px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+.find-hotel__button {
+  margin-bottom: 49px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 57px;
+  }
+}
+
+.find-hotel__map img {
+  max-width: 100%;
 }

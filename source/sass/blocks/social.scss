@@ -6,7 +6,21 @@
 .social__item {
   width: 46px;
   height: 48px;
-  background-color: var(--main);
+  margin-right: 6px;
+  background-color: $main;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $main-hover;
+  }
+
+  &:active {
+    background-color: $main-active;
+  }
 }
 
 .social__link {
@@ -26,5 +40,9 @@
 
   &--youtube {
     background-image: url("../img/youtube.svg");
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

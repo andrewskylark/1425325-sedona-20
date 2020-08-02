@@ -34,9 +34,9 @@ body {
   padding: 0;
   margin: 0 auto;
 
-  //что происходит на длинных мониторах? задать всей странице максималоьную ширину?
   @media screen and (min-width: 1200px) {
     width: 1200px;
+    box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -79,6 +79,6 @@ body {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  color: var(--text-accent);
-  background-color: var(--main);
+  color: $text-accent;
+  background-color: $main;
 }
