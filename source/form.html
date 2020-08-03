@@ -88,7 +88,7 @@
 
           <legend class="form__legend  title">Контактная информация:</legend>
 
-          <label class="form__label form__label--phone" for="tel">Контактный телефон*:</label>
+          <label class="form__label form__label--phone" for="tel"><span>Контактный</span> телефон*:</label>
           <input class="form__input form__input--phone" type="tel" id="tel" name="tel" placeholder="Введите телефон"
             required>
           <label class="form__label" for="email">Электронная почта*:</label>
@@ -115,19 +115,20 @@
         <fieldset class="form__fieldset form__fieldset--visited">
 
           <legend class="form__legend title">Посещенные достопримечательности:</legend>
+          <div class="form__wrapper-visited">
+            <input class="visually-hidden" type="checkbox" id="devil-bridge" name="visited" value="devil-bridge"
+              checked>
+            <label class="form__label form__label--bold" for="devil-bridge">Мост Дьявола</label>
 
-          <input class="visually-hidden" type="checkbox" id="devil-bridge" name="visited" value="devil-bridge" checked>
-          <label class="form__label form__label--bold" for="devil-bridge">Мост Дьявола</label>
+            <input class="visually-hidden" type="checkbox" id="mountain" name="visited" value="mountain" checked>
+            <label class="form__label form__label--bold" for="mountain">Гора-Колокол</label>
 
-          <input class="visually-hidden" type="checkbox" id="mountain" name="visited" value="mountain" checked>
-          <label class="form__label form__label--bold" for="mountain">Гора-Колокол</label>
+            <input class="visually-hidden" type="checkbox" id="slide-park" name="visited" value="slide-park" checked>
+            <label class="form__label form__label--bold" for="slide-park">Слайд-парк</label>
 
-          <input class="visually-hidden" type="checkbox" id="slide-park" name="visited" value="slide-park" checked>
-          <label class="form__label form__label--bold" for="slide-park">Слайд-парк</label>
-
-          <input class="visually-hidden" type="checkbox" id="redrocks" name="visited" value="redrocks">
-          <label class="form__label form__label--bold" for="redrocks">Красные скалы</label>
-
+            <input class="visually-hidden" type="checkbox" id="redrocks" name="visited" value="redrocks">
+            <label class="form__label form__label--bold" for="redrocks">Красные скалы</label>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--textarea">
@@ -139,6 +140,8 @@
         </fieldset>
 
         <button class="form__button main-button" type="submit">Отправить отзыв</button>
+
+        <p class="form__required p-clear">* — обязательные поля</p>
       </form>
 
     </section>

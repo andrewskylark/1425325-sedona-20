@@ -1,9 +1,7 @@
 .review {
   min-width: 320px;
-  padding-top: 36px;
+  padding-top: 4px;
   padding-bottom: 48px;
-  padding-left: 20px;
-  padding-right: 20px;
   text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
@@ -13,11 +11,35 @@
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
+    padding-top: 43px;
     padding-left: 120px;
     padding-right: 120px;
   }
 }
 
+.review__title {
+  margin-bottom: 28px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 14px;
+    margin-bottom: 33px;
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
 .review__text {
-  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 17px;
+  line-height: 24px;
+  border-bottom: 1px solid $input-hover;
+
+  @media screen and (min-width: 768px) {
+    width: 440px;
+    margin: 0 auto 50px auto;
+    border-bottom: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 21px;
+  }
 }

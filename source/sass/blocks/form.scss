@@ -1,10 +1,10 @@
 .form {
   display: grid;
   align-content: center;
-  padding-top: 20px;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 13px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -13,51 +13,252 @@
 }
 
 .form__fieldset {
+  padding: 5px 5.5% 5px 5.5%;
   border: none;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $input-hover;
 
   &:last-of-type {
     border-bottom: none;
   }
 
-  &--name {
+  @media screen and (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: none;
+  }
+}
+
+.form__legend {
+  padding-top: 20px;
+  margin-bottom: 14px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+// форма ФИО
+.form__fieldset--name {
+  .form__label {
+    display: flex;
+    align-items: center;
+  }
+
+  .form__input {
+    margin-left: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 55px;
+
+    .form__legend {
+      text-align: left;
+      margin-bottom: 49px;
+    }
+
+    .form__label {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 77px;
+  }
+}
+// форма контактов
+.form__fieldset--contacts {
+  padding-bottom: 17px;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / -1;
+    padding-top: 0;
+    padding-bottom: 26px;
+    margin-top: 67px;
+    border-top: 1px solid #dbdbdb;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 28px;
     text-align: left;
-  }
 
-  &--visited {
-    @media screen and (min-width: 768px) {
-      grid-column: 1 / -1;
+    span {
+      display: none;
     }
   }
 
-  &--impression {
+  .form__legend {
+    margin-bottom: 12px;
+
     @media screen and (min-width: 768px) {
-      grid-row: 1;
-      grid-column: 1;
+      padding: 0 60px 0 60px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 71px;
     }
   }
 
-  &--contacts {
+  .form__label {
+    text-align: left;
+    margin-left: 8%;
+    margin-bottom: 8px;
+
     @media screen and (min-width: 768px) {
-      grid-column: 1 / -1;
+      margin-left: 3%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+      display: inline;
     }
   }
 
-  &--textarea {
+  .form__input {
+    margin-bottom: 11px;
+
     @media screen and (min-width: 768px) {
-      grid-column: 1 / 3;
+      margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 316px;
+      margin-left: 10px;
+
+      &--phone {
+        margin-right: 75px;
+      }
+    }
+  }
+}
+// форма впечатлений
+.form__fieldset--impression {
+  padding-bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 0;
+    border-right: 1px solid #dbdbdb;
+  }
+
+  .form__legend {
+    margin-bottom: 33px;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      margin-bottom: 73px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 79px;
+    }
+  }
+
+  .form__label {
+    padding-left: 60px;
+    margin-bottom: 42px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 52px;
+      padding-left: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-left: 79px;
+      text-align: left;
+    }
+  }
+}
+// форма посещенных достопремечательнойтей
+.form__fieldset--visited {
+  padding-top: 0;
+  padding-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / -1;
+    border-top: 1px solid #dbdbdb;
+    // позиционирование чекбоксов
+    .form__wrapper-visited {
+      display: grid;
+      grid-template-columns: 260px 260px;
+      margin: 0 auto 7px 14%;
+
+      @media screen and (min-width: 1200px) {
+        width: 960px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .form__legend {
+    padding-top: 15px;
+    margin-bottom: 36px;
+
+    @media screen and (min-width: 768px) {
+      width: 400px;
+      padding: 0 60px 0 60px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .form__label {
+    padding-left: 0;
+    margin-bottom: 54px;
+
+    &:last-child {
+      margin-bottom: 39px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-left: 32%;
+      width: 250px;
+      margin-bottom: 62px;
+      text-align: left;
+
+      &:last-child {
+        margin-bottom: 62px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: auto;
+      padding-left: 80px;
     }
   }
 }
 
-.form__fieldset--name label {
-  display: flex;
-  align-items: center;
-}
+.form__fieldset--textarea {
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / 3;
+    border-top: 1px solid #dbdbdb;
 
+    .form__legend {
+      padding: 0 75px;
+      margin-bottom: 50px;
+    }
+
+    .form__input {
+      margin-bottom: 47px;
+    }
+  }
+}
+// Общие стили лэйблов
 .form__label {
   position: relative;
   display: block;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 26px;
 
@@ -67,19 +268,80 @@
     font-weight: bold;
   }
 }
-
+// Общие стили импутов
 .form__input {
+  height: 58px;
   position: relative;
   padding: 18px 22px 14px 22px;
-  background-color: var(--input);
+  background-color: $input;
   border: none;
+
+  &:hover {
+    background-color: $input-hover;
+  }
+
+  &:focus {
+    background: $text-accent;
+    border: 4px solid $input-hover;
+  }
+  // чтобы не делать лишний див, намутил поля телефона и емэйла градиентом с иконкой,
+  // теперь думаю стоила ли эта конструкция того :)
+  &--phone {
+    width: 100%;
+    background: url("../img/icon-phone.svg"),
+      linear-gradient(to left, $input-icon 58px, $input 58px);
+    background-repeat: no-repeat;
+    background-position: 93%;
+
+    &:hover {
+      background: url("../img/icon-phone.svg"),
+        linear-gradient(to left, $input-icon 58px, $input-hover 58px);
+      background-repeat: no-repeat;
+      background-position: 89%;
+    }
+
+    &:focus,
+    &:active {
+      background: url("../img/icon-phone.svg"),
+        linear-gradient(to left, $input-icon 58px, $text-accent 58px);
+      background-repeat: no-repeat;
+      background-position: 97%;
+      border: 4px solid $input-hover;
+    }
+  }
+
+  &--email {
+    width: 100%;
+    background: url("../img/icon-mail.svg"),
+      linear-gradient(to left, $input-icon 58px, $input 58px);
+    background-repeat: no-repeat;
+    background-position: 97%;
+
+    &:hover {
+      background: url("../img/icon-mail.svg"),
+        linear-gradient(to left, $input-icon 58px, $input-hover 58px);
+      background-repeat: no-repeat;
+      background-position: 97%;
+    }
+
+    &:focus {
+      background: url("../img/icon-mail.svg"),
+        linear-gradient(to left, $input-icon 58px, $text-accent 58px);
+      background-repeat: no-repeat;
+      background-position: 97%;
+      border: 4px solid $input-hover;
+    }
+  }
 
   &::placeholder,
   &--textarea {
-    color: var(--text-main);
-    font-weight: bold;
+    width: 100%;
+    min-height: 160px;
+    margin-bottom: 36px;
     font-size: 18px;
     line-height: 26px;
+    color: $text-main;
+    font-weight: bold;
   }
 }
 
@@ -87,58 +349,75 @@ input[type="text"] {
   width: 100%;
 }
 // кастомные чекбоксы и радио
-input[type="radio"] + .form__label {
-  width: 286px;
-  padding-left: 74px;
-}
-
 input[type="radio"]:checked + .form__label::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 17px;
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  background-color: var(--text-main);
-  border: 3px solid var(--text-main);
+  width: 22px;
+  height: 22px;
+  background-color: $text-main;
+  border: 3px solid $text-main;
   border-radius: 50%;
 }
 
 input[type="radio"] + .form__label::before {
   content: "";
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--input);
-  border: 5px solid var(--input);
+  background-color: $input;
+  border: 5px solid $input;
   border-radius: 50%;
 }
 
 input[type="checkbox"]:checked + .form__label::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 50%;
+  left: 17px;
+  top: 15%;
   transform: rotate(-45deg);
-  width: 18px;
-  height: 9px;
-  border-left: 3px solid var(--text-main);
-  border-bottom: 3px solid var(--text-main);
+  width: 25px;
+  height: 14px;
+  border-left: 4px solid $text-main;
+  border-bottom: 4px solid $text-main;
 }
 
 input[type="checkbox"] + .form__label::before {
   content: "";
   position: absolute;
-  width: 46px;
-  height: 46px;
+  width: 56px;
+  height: 56px;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--input);
-  border: 5px solid var(--input);
+  background-color: $input;
+  border: 5px solid $input;
   border-radius: 10%;
+}
+// кнопка отправить
+.form__button {
+  margin-right: 6.5%;
+  margin-left: 6.5%;
+  text-transform: inherit;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin: 0;
+  }
+}
+// * — обязательные поля
+.form__required {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-top: 22px;
+    text-align: right;
+  }
 }

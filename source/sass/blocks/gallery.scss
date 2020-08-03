@@ -34,12 +34,14 @@
   padding-bottom: 40px;
 
   &:first-of-type {
-    width: 520px;
-    margin: 0 auto 40px auto;
-    padding-bottom: 44px;
+    margin: 0 auto 0 auto;
+    padding-bottom: 40px;
     border-bottom: 1px solid #e5e5e5;
 
     @media screen and (min-width: 768px) {
+      width: 520px;
+      padding-bottom: 44px;
+      margin-bottom: 40px;
       border-bottom: none;
     }
 
@@ -122,7 +124,7 @@
 }
 
 .gallery__caption {
-  padding-top: 3px;
+  padding-top: 10px;
   position: relative;
   display: block;
   text-align: left;
@@ -192,6 +194,7 @@
   }
 
   @media screen and (min-width: 768px) {
+    min-height: 785px;
     padding-top: 65px;
   }
 
