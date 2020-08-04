@@ -81,4 +81,14 @@ body {
   line-height: 26px;
   color: $text-accent;
   background-color: $main;
+
+  &:hover,
+  &:focus {
+    background-color: $main-hover;
+  }
+
+  &:active {
+    color: rgba($text-accent, 0.6);
+    background-color: $main-active;
+  }
 }

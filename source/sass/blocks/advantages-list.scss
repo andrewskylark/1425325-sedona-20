@@ -134,6 +134,9 @@
 }
 // картинки
 .advantages-list__img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   object-fit: cover;
 
   @media screen and (min-width: 768px) {
