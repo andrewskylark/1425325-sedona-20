@@ -37,7 +37,11 @@
         </li>
         <li class="site-list__item">
           <a class="page-header__logo" href="index.html" aria-label="логотип сайта Седона и ссылка на главную">
-            <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="логотип city of sedona">
+            </picture>
           </a>
         </li>
       </ul>
@@ -69,8 +73,14 @@
       <ul class="gallery__list ul-clear">
         <li class="gallery__item">
           <figure class="gallery__photo">
-            <img class="gallery__img" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280"
-              alt="фото дороги на рассвете">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 786px)"
+                srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img class="gallery__img" src="img/photo-sunset-mobile@1x.jpg 1x"
+                srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="фото дороги на рассвете">
+            </picture>
             <figcaption class="gallery__caption">
               неродные просторы
               <cite class="gallery__author">
@@ -83,8 +93,14 @@
 
         <li class="gallery__item">
           <figure class="gallery__photo">
-            <img class="gallery__img" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280"
-              alt="фото кактуса на фоне гор в Седоне">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 786px)"
+                srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img class="gallery__img" src="img/photo-cactus-mobile@1x.jpg 1x"
+                srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="фото кактуса на фоне гор в Седоне">
+            </picture>
             <figcaption class="gallery__caption">
               Местная растительность
               <cite class="gallery__author">
@@ -97,8 +113,14 @@
 
         <li class="gallery__item">
           <figure class="gallery__photo">
-            <img class="gallery__img" src="img/photo-roads-mobile@1x.jpg" width="280" height="280"
-              alt="фото серпантина дороги в хвойном лесу">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 786px)"
+                srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img class="gallery__img" src="img/photo-roads-mobile@1x.jpg 1x" srcset="img/photo-roads-mobile@2x.jpg 2x"
+                alt="фото серпантина дороги в хвойном лесу">
+            </picture>
             <figcaption class="gallery__caption">
               Дорога на север
               <cite class="gallery__author">
@@ -111,8 +133,14 @@
 
         <li class="gallery__item">
           <figure class="gallery__photo">
-            <img class="gallery__img" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280"
-              alt="фото узкой горной тропы в каньоне">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 786px)"
+                srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="gallery__img" src="img/photo-bridge-mobile@1x.jpg 1x" src="img/photo-bridge-mobile@2x.jpg 2x"
+                alt="фото узкой горной тропы в каньоне">
+            </picture>
             <figcaption class="gallery__caption">
               Мост дьявола
               <cite class="gallery__author">

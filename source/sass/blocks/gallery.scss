@@ -87,11 +87,11 @@
       grid-column: 1 / -1;
 
       .gallery__img {
-        height: 400px;
+        max-height: 400px;
       }
 
       @media screen and (min-width: 1200px) {
-        height: 400px;
+        max-height: 400px;
       }
     }
     // у каждой нечетной карточки (кроме первой) темная заливка фигкапчи на планшете

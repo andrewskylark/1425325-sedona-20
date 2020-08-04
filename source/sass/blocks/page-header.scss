@@ -18,10 +18,17 @@
   height: 158px;
   background-image: url("../img/bg-intro-triangle-mobile.svg"),
     url("../img/bg-back-mobile@1x.jpg");
+  background-size: cover, auto;
   background-repeat: no-repeat;
   background-position: bottom center;
   background-color: lightblue;
   z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-intro-triangle-mobile.svg"),
+      url("../img/bg-back-mobile@2x.jpg");
+    background-size: 768px auto;
+  }
 
   &--index {
     height: 389px;
@@ -29,8 +36,15 @@
 
   @media screen and (min-width: 768px) {
     height: 290px;
-    background-image: url("../img/bg-intro-triangle-desktop.svg"),
-      url("../img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/intro-triangle.svg"),
+      url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-triangle.svg"),
+        url("../img/bg-back-tablet@2x.jpg");
+      background-size: auto, cover;
+      background-position: bottom, bottom 0;
+    }
 
     &--index {
       height: 518px;
@@ -39,6 +53,14 @@
 
   @media screen and (min-width: 1200px) {
     height: 301px;
+    background-image: url("../img/intro-triangle.svg"),
+      url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-triangle.svg"),
+        url("../img/bg-back-desktop@2x.jpg");
+      background-size: auto, 1200px;
+    }
 
     &--index {
       height: 518px;
@@ -54,11 +76,13 @@
 .page-header__logo {
   display: block;
   height: 84px;
-  z-index: 10;
-  margin-bottom: -34px;
+  z-index: 5;
 
   @media screen and (min-width: 1200px) {
-    height: 97px;
+    img {
+      width: 186.6px;
+      height: 96px;
+    }
   }
 }
 // кнопка открыть/закрыть мобильное меню
