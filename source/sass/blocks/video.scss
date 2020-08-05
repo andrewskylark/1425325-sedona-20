@@ -1,0 +1,184 @@
+.video {
+  position: relative;
+  width: 320px;
+  height: 267px;
+  margin: 0 auto;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 320px 201px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 320px 201px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 500px;
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: cover;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 800px;
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: cover;
+    }
+  }
+}
+// контролы видео
+.video__controls-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 111px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 93px;
+  }
+}
+
+.video__playback {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  background-color: rgba($text-main, 0.6);
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    width: 470px;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: transparent;
+  }
+}
+// кнопки и их контейнер
+.video_buttons {
+  position: relative;
+  min-height: 66px;
+  width: 100%;
+  background-color: #f2f2f2;
+
+  @media screen and (min-width: 768px) {
+    height: 93px;
+    background-color: rgba($text-main, 0.6);
+  }
+}
+
+.video__progress-bar {
+  height: 3px;
+  width: 84%;
+  background-color: rgba($text-accent, 0.2);
+  cursor: pointer;
+}
+
+.video__toggle {
+  position: absolute;
+  top: 50%;
+  left: 55px;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  background-color: $text-accent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    left: 155px;
+  }
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  height: 20px;
+  width: 32px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0.6;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media screen and (min-width: 768px) {
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--replay {
+    left: 19px;
+    background-image: url("../img/icon-video-replay.svg");
+
+    @media screen and (min-width: 768px) {
+      left: 28px;
+      background-image: url("../img/icon-replay-white.svg");
+    }
+  }
+
+  &--subtitles {
+    right: 74px;
+    background-image: url("../img/icon-video-subtitles.svg");
+
+    @media screen and (min-width: 768px) {
+      right: 92px;
+      background-image: url("../img/icon-subtitles-white.svg");
+    }
+  }
+
+  &--fullscreen {
+    right: 18px;
+    background-image: url("../img/icon-video-fullscreen.svg");
+
+    @media screen and (min-width: 768px) {
+      right: 35px;
+      background-image: url("../img/icon-fullscreen-white.svg");
+    }
+  }
+}
