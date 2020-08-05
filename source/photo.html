@@ -76,10 +76,10 @@
             <picture>
               <source media="(min-width: 1200px)"
                 srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
-              <source media="(min-width: 786px)"
+              <source media="(min-width: 450px)"
                 srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-              <img class="gallery__img" src="img/photo-sunset-mobile@1x.jpg 1x"
-                srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="фото дороги на рассвете">
+              <img class="gallery__img" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x"
+                alt="фото дороги на рассвете">
             </picture>
             <figcaption class="gallery__caption">
               неродные просторы
@@ -96,10 +96,10 @@
             <picture>
               <source media="(min-width: 1200px)"
                 srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
-              <source media="(min-width: 786px)"
+              <source media="(min-width: 450px)"
                 srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
-              <img class="gallery__img" src="img/photo-cactus-mobile@1x.jpg 1x"
-                srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="фото кактуса на фоне гор в Седоне">
+              <img class="gallery__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x"
+                alt="фото кактуса на фоне гор в Седоне">
             </picture>
             <figcaption class="gallery__caption">
               Местная растительность
@@ -116,9 +116,9 @@
             <picture>
               <source media="(min-width: 1200px)"
                 srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
-              <source media="(min-width: 786px)"
+              <source media="(min-width: 450px)"
                 srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
-              <img class="gallery__img" src="img/photo-roads-mobile@1x.jpg 1x" srcset="img/photo-roads-mobile@2x.jpg 2x"
+              <img class="gallery__img" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x"
                 alt="фото серпантина дороги в хвойном лесу">
             </picture>
             <figcaption class="gallery__caption">
@@ -136,9 +136,9 @@
             <picture>
               <source media="(min-width: 1200px)"
                 srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
-              <source media="(min-width: 786px)"
+              <source media="(min-width: 450px)"
                 srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-              <img class="gallery__img" src="img/photo-bridge-mobile@1x.jpg 1x" src="img/photo-bridge-mobile@2x.jpg 2x"
+              <img class="gallery__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x"
                 alt="фото узкой горной тропы в каньоне">
             </picture>
             <figcaption class="gallery__caption">
@@ -165,12 +165,25 @@
           Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
         </p>
 
-        <video class="gallery__video" controls="controls" poster="img/video-mobile@1x.jpg" width="320" height="201">
+        <div class="gallery__video video">
+          <div class="video__controls-container">
 
-          <source src="https://via.placeholder.com/150x150" type="video/mp4">
-          <source src="https://via.placeholder.com/150x150" type="video/mp4">
-          Тег video не поддерживается вашим браузером.
-        </video>
+            <div class="video__controls">
+
+              <div class="video__playback">
+                <div class="video__progress-bar"></div>
+                <div class="video__toggle"></div>
+              </div>
+
+              <div class="video_buttons">
+                <button class="video__button video__button--replay" type="button"></button>
+                <button class="video__button video__button--subtitles" type="button"></button>
+                <button class="video__button video__button--fullscreen" type="button"></button>
+              </div>
+
+            </div>
+          </div>
+        </div>
 
       </div>
 

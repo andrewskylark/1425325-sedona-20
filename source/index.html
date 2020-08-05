@@ -133,7 +133,7 @@
               srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
             <source media="(min-width: 450px)"
               srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-            <img class="advantages-list__img advantages-list__img--bridge" src="img/photo-bridge-mobile@1x.jpg 1x"
+            <img class="advantages-list__img advantages-list__img--bridge" src="img/photo-bridge-mobile@1x.jpg"
               srcset="img/photo-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="фото моста дьявола в Седоне">
           </picture>
 
@@ -184,24 +184,25 @@
 
       <h2 class="visually-hidden">Найти отель</h2>
 
-      <p class="find-hotel__title title title--bigger">
+      <p class="find-hotel__title title title--bigger find-hotel__wrapper">
         Заинтересовались?
       </p>
 
-      <p class="find-hotel__text p-clear">
+      <p class="find-hotel__text p-clear find-hotel__wrapper">
         Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
       </p>
 
-      <a class="find-hotel__button main-button" href="blank.html">Найти гостиницу</a>
+      <a class="find-hotel__button main-button find-hotel__wrapper" href="blank.html">Найти гостиницу</a>
 
       <div class="find-hotel__map">
-        <!-- здесь будет карта  -->
-        <img src="img/bg-map-mobile@1x.jpg" alt="карта проезда к городу Седона" width="320" height="350">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 420px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="карта проезда к городу Седона">
+        </picture>
       </div>
 
-
     </section>
-
   </main>
 
   <footer class="page-footer page-footer__wrapper">
