@@ -24,25 +24,18 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  &--twitter {
-    background-image: url("../img/twitter.svg");
-  }
-
-  &--fb {
-    background-image: url("../img/facebook.svg");
-  }
-
-  &--youtube {
-    background-image: url("../img/youtube.svg");
-  }
 
   &:active {
     opacity: 0.6;
   }
+}
+
+.social__icon {
+  fill: $text-accent;
 }
