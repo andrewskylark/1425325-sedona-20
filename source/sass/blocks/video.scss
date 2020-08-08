@@ -128,15 +128,9 @@
   border: none;
   cursor: pointer;
   z-index: 5;
-  opacity: 0.6;
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
 
   &:active {
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
   @media screen and (min-width: 768px) {
@@ -151,34 +145,71 @@
       opacity: 0.3;
     }
   }
-
+  // иконки в моб 2 цвета и на планшете белые - сделал каждой кнопке бэкграунд свг спрайт
+  // на иконки трех цветов со сменой позиции бэкграунда
   &--replay {
     left: 19px;
-    background-image: url("../img/icon-video-replay.svg");
+    background-image: url("../img/icon-replay-sprite.svg");
+    background-position: 50% 0;
+
+    &:hover {
+      background-image: url("../img/icon-replay-sprite.svg");
+      background-position: 50% -25px;
+    }
 
     @media screen and (min-width: 768px) {
       left: 28px;
-      background-image: url("../img/icon-replay-white.svg");
+      background-image: url("../img/icon-replay-sprite.svg");
+      background-position: 50% -50px;
+
+      &:hover {
+        background-image: url("../img/icon-replay-sprite.svg");
+        background-position: 50% -50px;
+      }
     }
   }
 
   &--subtitles {
     right: 74px;
-    background-image: url("../img/icon-video-subtitles.svg");
+    background-image: url("../img/icon-cc-sprite.svg");
+    background-position: 50% 0;
+
+    &:hover {
+      background-image: url("../img/icon--sprite.svg");
+      background-position: 50% -25px;
+    }
 
     @media screen and (min-width: 768px) {
       right: 92px;
-      background-image: url("../img/icon-subtitles-white.svg");
+      background-image: url("../img/icon-cc-sprite.svg");
+      background-position: 50% -50px;
+
+      &:hover {
+        background-image: url("../img/icon-cc-sprite.svg");
+        background-position: 50% -50px;
+      }
     }
   }
 
   &--fullscreen {
     right: 18px;
-    background-image: url("../img/icon-video-fullscreen.svg");
+    background-image: url("../img/icon-fullscreen-sprite.svg");
+    background-position: 50% 0;
+
+    &:hover {
+      background-image: url("../img/icon-fullscreen-sprite.svg");
+      background-position: 50% -25px;
+    }
 
     @media screen and (min-width: 768px) {
       right: 35px;
-      background-image: url("../img/icon-fullscreen-white.svg");
+      background-image: url("../img/icon-fullscreen-sprite.svg");
+      background-position: 50% -50px;
+
+      &:hover {
+        background-image: url("../img/icon-fullscreen-sprite.svg");
+        background-position: 50% -50px;
+      }
     }
   }
 }
