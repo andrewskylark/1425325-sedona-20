@@ -81,6 +81,7 @@ body {
   line-height: 26px;
   color: $text-accent;
   background-color: $main;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -90,5 +91,16 @@ body {
   &:active {
     color: rgba($text-accent, 0.6);
     background-color: $main-active;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $disabled;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $disabled;
+    }
   }
 }

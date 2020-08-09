@@ -79,6 +79,19 @@
     &[href]:active {
       color: rgba($text-main, 0.3);
     }
+
+    &--active {
+      color: $menu-active;
+    }
+
+    &--active[href]:hover,
+    &--active[href]:focus {
+      color: $menu-active-hover;
+    }
+
+    &--active[href]:active {
+      color: rgba($menu-active, 0.3);
+    }
   }
 
   @media screen and (min-width: 1200px) {

@@ -123,11 +123,22 @@
   width: 32px;
   transform: translateY(-50%);
   background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   z-index: 5;
+
+  .video__icon {
+    fill: #5c6870;
+
+    &:hover,
+    &:focus {
+      fill: #333333;
+    }
+
+    &:active {
+      fill: #5c6870;
+    }
+  }
 
   &:active {
     opacity: 0.6;
@@ -144,72 +155,51 @@
     &:active {
       opacity: 0.3;
     }
+
+    .video__icon,
+    .video__icon:hover,
+    .video__icon:focus,
+    .video__icon:active {
+      fill: $text-accent;
+    }
   }
-  // иконки в моб 2 цвета и на планшете белые - сделал каждой кнопке бэкграунд свг спрайт
-  // на иконки трех цветов со сменой позиции бэкграунда
+
   &--replay {
     left: 19px;
-    background-image: url("../img/icon-replay-sprite.svg");
-    background-position: 50% 0;
 
-    &:hover {
-      background-image: url("../img/icon-replay-sprite.svg");
-      background-position: 50% -25px;
+    .video__icon {
+      width: 16px;
+      height: 20px;
     }
 
     @media screen and (min-width: 768px) {
       left: 28px;
-      background-image: url("../img/icon-replay-sprite.svg");
-      background-position: 50% -50px;
-
-      &:hover {
-        background-image: url("../img/icon-replay-sprite.svg");
-        background-position: 50% -50px;
-      }
     }
   }
 
   &--subtitles {
     right: 74px;
-    background-image: url("../img/icon-cc-sprite.svg");
-    background-position: 50% 0;
 
-    &:hover {
-      background-image: url("../img/icon--sprite.svg");
-      background-position: 50% -25px;
+    .video__icon {
+      width: 32px;
+      height: 20px;
     }
 
     @media screen and (min-width: 768px) {
       right: 92px;
-      background-image: url("../img/icon-cc-sprite.svg");
-      background-position: 50% -50px;
-
-      &:hover {
-        background-image: url("../img/icon-cc-sprite.svg");
-        background-position: 50% -50px;
-      }
     }
   }
 
   &--fullscreen {
     right: 18px;
-    background-image: url("../img/icon-fullscreen-sprite.svg");
-    background-position: 50% 0;
 
-    &:hover {
-      background-image: url("../img/icon-fullscreen-sprite.svg");
-      background-position: 50% -25px;
+    .video__icon {
+      width: 20px;
+      height: 20px;
     }
 
     @media screen and (min-width: 768px) {
       right: 35px;
-      background-image: url("../img/icon-fullscreen-sprite.svg");
-      background-position: 50% -50px;
-
-      &:hover {
-        background-image: url("../img/icon-fullscreen-sprite.svg");
-        background-position: 50% -50px;
-      }
     }
   }
 }
