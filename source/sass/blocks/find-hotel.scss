@@ -6,7 +6,7 @@
   }
 }
 
-.find-hotel__wrapper {
+.hotel-wrapper {
   margin-left: 20px;
   margin-right: 20px;
 
@@ -53,6 +53,7 @@
 }
 
 .find-hotel__map {
+  min-height: 350px;
   width: 100%;
 
   img {

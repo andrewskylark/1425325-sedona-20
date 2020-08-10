@@ -1,3 +1,4 @@
+// мобильное меню
 var nav = document.querySelector('.nav');
 var navToggle = document.querySelector('.nav__toggle');
 
