@@ -166,25 +166,21 @@
     top: 50%;
     transform: translateY(-50%);
   }
-  // иконки в спрайте вместе с фулкрином для видео
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 23px;
-    height: 21px;
-    background-image: url("../img/icon-fullscreen-sprite.svg");
-    background-repeat: no-repeat;
-    background-position: 50% -75px;
-    opacity: 0.3;
+}
 
-    @media screen and (min-width: 1200px) {
-      background-image: url("../img/icon-fullscreen-sprite.");
-      background-position: 50% -100px;
-      opacity: 1;
-    }
+.gallery__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 21px;
+  fill: $text-main;
+  opacity: 0.3;
+
+  @media screen and (min-width: 1200px) {
+    fill: $text-accent;
+    opacity: 1;
   }
 }
 
