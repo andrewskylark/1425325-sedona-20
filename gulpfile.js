@@ -22,7 +22,7 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())                     // мумифицирует css
-    .pipe(rename("styles.min.css"))    // переименовывает в
+    .pipe(rename("style.min.css"))    // переименовывает в
     .pipe(sourcemap.write("."))     // кладет карты кода в корень "."
     .pipe(gulp.dest("build/css"))  //положить файл в
     .pipe(sync.stream());
@@ -55,13 +55,23 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 
-// мумификация изображений;
+// мумификация изображений; каждый плагин для типа файла
 const images = () => {
-  return gulp.src("sourse/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3})
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo({
+          plugins: [
+              {removeViewBox: false},
+              {cleanupIDs: false}
+          ]
+      })
     ]))
+    .pipe(gulp.dest("source/img"))
 }
+
 exports.images = images;
 
 // добавление фото в webp
@@ -108,11 +118,9 @@ exports.cleanBuild = cleanBuild
 
 // создать build в продакшн
 const build = (done) => gulp.series (
-  "images",
   "cleanBuild",
   "copy",
-  "styles",
-  "sprite"
+  "styles"
 )
 (done);
 
