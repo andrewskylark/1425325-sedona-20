@@ -30,6 +30,15 @@ const styles = () => {
 
 exports.styles = styles;
 
+// html таск: положить из сорса в билд, перезапустить сервер
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream());
+}
+
+exports.html = html;
+
 // Server
 const server = (done) => {
   sync.init({
@@ -48,12 +57,14 @@ exports.server = server;
 // Watcher
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-exports.default = gulp.series(
-  styles, server, watcher
-);
+exports.default = (done) => gulp.series(
+  build, server, watcher
+)
+(done);
 
 // мумификация изображений; каждый плагин для типа файла
 const images = () => {
@@ -93,6 +104,16 @@ const sprite = () => {
 
 exports.sprite = sprite
 
+// внутренний спрайт
+const inSprite = () => {
+  return gulp.src("source/img/**/in-icon-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("in-sprite.svg"))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.inSprite = inSprite
+
 // коприрование в папку билда
 const copy = () => {
   return gulp.src([
@@ -100,7 +121,6 @@ const copy = () => {
     "source/img/**",
     "source/js/**",
     "source/*.ico",
-    "source/*.html"
   ], {
     base: "source"  //  копируется вложенность после папки source
   })
@@ -120,7 +140,9 @@ exports.cleanBuild = cleanBuild
 const build = (done) => gulp.series (
   "cleanBuild",
   "copy",
-  "styles"
+  "styles",
+  "html",
+  "sprite",
 )
 (done);
 
