@@ -293,12 +293,12 @@
   // теперь думаю стоила ли эта конструкция того :)
   &--phone {
     width: 100%;
-    background-image: url("../img/icon-phone-square.svg");
+    background-image: url("../img/phone-square.svg");
     background-repeat: no-repeat;
     background-position: right;
 
     &--active {
-      background-image: url("../img/icon-phone-square.svg");
+      background-image: url("../img/phone-square.svg");
       background-repeat: no-repeat;
       background-position: right;
     }
@@ -306,12 +306,12 @@
 
   &--email {
     width: 100%;
-    background-image: url("../img/icon-mail-square.svg");
+    background-image: url("../img/mail-square.svg");
     background-repeat: no-repeat;
     background-position: right;
 
     &--active {
-      background-image: url("../img/icon-mail-square.svg");
+      background-image: url("../img/mail-square.svg");
       background-repeat: no-repeat;
       background-position: right;
     }
