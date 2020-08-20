@@ -11,6 +11,8 @@ const imagemin = require("gulp-imagemin"); // npm i --save-dev gulp-imagemin
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 
 // Styles
 const styles = () => {
@@ -26,19 +28,30 @@ const styles = () => {
     .pipe(sourcemap.write("."))     // кладет карты кода в корень "."
     .pipe(gulp.dest("build/css"))  //положить файл в
     .pipe(sync.stream());
-}
+};
 
 exports.styles = styles;
 
+const jsMin = () => {
+  return gulp.src("source/js/*.js")
+  // .pipe(uglify())
+  .pipe(gulp.dest("build/js"))
+  .pipe(sync.stream());
+};
+
+exports.jsMin = jsMin;
+
+//мумификация html
 // html таск: положить из сорса в билд, перезапустить сервер
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true})) //мумификация html
     .pipe(gulp.dest("build"))
     .pipe(sync.stream());
-}
+};
 
 exports.html = html;
-
 // Server
 const server = (done) => {
   sync.init({
@@ -58,7 +71,9 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("jsMin"));
   gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/js/app.js").on("change", sync.reload);
 }
 
 exports.default = (done) => gulp.series(
@@ -119,8 +134,8 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source/*.ico",
+    "source/css/simple-lightbox.min.css" // копирует лайтбокс
   ], {
     base: "source"  //  копируется вложенность после папки source
   })
@@ -143,6 +158,7 @@ const build = (done) => gulp.series (
   "styles",
   "html",
   "sprite",
+  "jsMin"
 )
 (done);
 
