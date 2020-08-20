@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="page__body">
@@ -78,10 +80,12 @@
           <legend class="form__legend title">Представьтесь:</legend>
 
           <label class="form__label" for="name">Имя*:
-            <input class="form__input" type="text" id="name" name="name" placeholder="Петр" required>
+            <input class="form__input form__input--required form__input--name" type="text" id="name" name="name"
+              placeholder="Петр">
           </label>
           <label class="form__label" for="surname">Фамилия*:
-            <input class="form__input" type="text" id="surname" name="surname" placeholder="Иванов" required>
+            <input class="form__input form__input--required form__input--surname" type="text" id="surname"
+              name="surname" placeholder="Иванов">
           </label>
           <label class="form__label" for="middlename">Отчество:
             <input class="form__input" type="text" id="middlename" name="middlename" placeholder="Александрович">
@@ -93,11 +97,11 @@
           <legend class="form__legend  title">Контактная информация:</legend>
 
           <label class="form__label form__label--phone" for="tel"><span>Контактный</span> телефон*:</label>
-          <input class="form__input form__input--phone" type="tel" id="tel" name="tel" placeholder="Введите телефон"
-            required>
+          <input class="form__input form__input--required form__input--phone" type="tel" id="tel" name="tel"
+            placeholder="Введите телефон">
           <label class="form__label" for="email">Электронная почта*:</label>
-          <input class="form__input form__input--email" type="email" id="email" name="email"
-            placeholder="Введите e-mail" required>
+          <input class="form__input form__input--required form__input--email" type="email" id="email" name="email"
+            placeholder="Введите e-mail">
 
         </fieldset>
 
@@ -105,13 +109,13 @@
 
           <legend class="form__legend title">Ваше общее впечатление:</legend>
 
-          <input class="visually-hidden" type="radio" id="good" name="impression" checked>
+          <input class="visually-hidden" type="radio" id="good" name="impression" value="good" checked>
           <label class="form__label form__label--bold" for="good">Скорее положительное</label>
 
-          <input class="visually-hidden" type="radio" id="bad" name="impression">
+          <input class="visually-hidden" type="radio" id="bad" name="impression" value="bad">
           <label class="form__label form__label--bold" for="bad">Скорее отрицательное</label>
 
-          <input class="visually-hidden" type="radio" id="indifferent" name="impression">
+          <input class="visually-hidden" type="radio" id="indifferent" name="impression" value="indifferent">
           <label class="form__label form__label--bold" for="indifferent">Затрудняюсь ответить</label>
 
         </fieldset>
@@ -190,6 +194,28 @@
     </a>
 
   </footer>
+
+  <section class="modal modal--fail">
+    <h2 class="modal__title title">
+      Что-то пошло не так!
+    </h2>
+    <p class="modal__text p-clear">
+      Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+    </p>
+    <button class="modal__button modal__button--fail main-button" type="button" aria-lavel="закрыть окно">ок</button>
+  </section>
+
+  <section class="modal modal--success">
+    <h2 class="modal__title title">
+      Ваш отзыв отправлен!
+    </h2>
+    <p class="modal__text p-clear">
+      Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+    </p>
+    <div class="modal__background">
+      <button class="modal__button modal__button--success main-button" type="button">закрыть окно</button>
+    </div>
+  </section>
   <svg style="display: none;">
 
     <symbol id="cc" viewBox="0 0 32 20">
@@ -222,6 +248,7 @@
     </symbol>
   </svg>
   <script src="js/app.js"></script>
+
 </body>
 
 </html>

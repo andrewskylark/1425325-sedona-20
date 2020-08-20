@@ -1,17 +1,19 @@
 @font-face {
   font-family: "PTSans";
-  src: url("../fonts/ptsans.woff2") format("woff2"),
-    url("../fonts/ptsans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
   font-family: "PTSans";
-  src: url("../fonts/ptsansbold.woff2") format("woff2"),
-    url("../fonts/ptsansbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 .visually-hidden {
@@ -41,6 +43,7 @@ body {
 }
 
 .page {
+  position: relative;
   height: 100%;
   font-family: "PTSans", "Tahoma", sans-serif;
   font-size: 14px;

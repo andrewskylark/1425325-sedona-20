@@ -1,0 +1,149 @@
+.modal {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  min-height: 280px;
+  padding: 40px 42px 35px 42px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  &--fail {
+    display: none;
+    top: 25vh;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 400px;
+    min-height: 347px;
+  }
+
+  &--success {
+    display: none;
+    top: 20vh;
+    min-height: 323px;
+    padding: 0;
+    padding-top: 38px;
+
+    .modal__button {
+      width: 280px;
+      margin: 20px;
+    }
+
+    .modal__text {
+      width: 210px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 640px;
+      min-height: 347px;
+
+      .modal__title {
+        width: auto;
+        margin: 0 90px;
+      }
+
+      .modal__text {
+        width: auto;
+        margin: 0 110px;
+      }
+
+      .modal__button {
+        width: 458px;
+        margin: 44px 91px;
+      }
+    }
+  }
+}
+
+.modal__title {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    align-self: center;
+    width: 230px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__text {
+  width: 230px;
+  display: block;
+  line-height: 24px;
+  align-self: center;
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
+}
+
+.modal__button {
+  width: 180px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 18px;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    width: 272px;
+  }
+}
+
+.modal__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 98px;
+  background-color: $input;
+}
+
+.modal-show {
+  display: flex;
+  animation: bounce 0.4s;
+}
+
+.modal--fail.modal-show {
+  display: flex;
+  animation: shake 0.4s;
+}
+
+.modal-close {
+  display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-1500px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  40%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  30%,
+  70% {
+    transform: translateX(10px);
+  }
+}
