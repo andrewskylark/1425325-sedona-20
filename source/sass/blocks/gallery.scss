@@ -2,7 +2,7 @@
   min-width: 320px;
   line-height: 24px;
   margin: 0 auto;
-  margin-bottom: 45px;
+  margin-bottom: 41px;
 
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -89,6 +89,10 @@
 
       .gallery__img {
         max-height: 400px;
+      }
+
+      .galerry__likes {
+        right: 20px;
       }
 
       @media screen and (min-width: 1200px) {
