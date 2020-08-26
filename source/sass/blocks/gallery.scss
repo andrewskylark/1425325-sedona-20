@@ -58,7 +58,6 @@
   }
 }
 
-// под img какй-то отспут, в дев тулз не нашел что дает, img figcaption обнулил паддинги
 .gallery__list {
   @media screen and (min-width: 768px) {
     display: grid;
@@ -91,10 +90,22 @@
         max-height: 400px;
       }
 
+      .gallery__likes {
+        right: 20px;
+      }
+
       @media screen and (min-width: 1200px) {
         max-height: 400px;
       }
     }
+
+    &:nth-child(3) {
+      .gallery__likes {
+        right: 35px;
+      }
+    }
+
+
     // у каждой нечетной карточки (кроме первой) темная заливка фигкапчи на планшете
     &:nth-child(odd):not(:first-child) {
       .gallery__caption {
@@ -171,7 +182,7 @@
 .gallery__icon {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 5px;
   transform: translateY(-50%);
   width: 23px;
   height: 21px;

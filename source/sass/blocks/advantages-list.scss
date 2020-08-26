@@ -10,6 +10,7 @@
   padding: 26px 10%;
   background-color: $list-main;
   border-bottom: 1px solid #d6d6d6;
+  overflow: hidden;
 
   &:last-child {
     border-bottom: none;
