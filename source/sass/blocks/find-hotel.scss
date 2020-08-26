@@ -42,6 +42,10 @@
       display: block;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 44px;
+  }
 }
 
 .find-hotel__button {
@@ -49,6 +53,10 @@
 
   @media screen and (min-width: 768px) {
     margin-bottom: 57px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 65px;
   }
 }
 
