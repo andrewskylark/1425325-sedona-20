@@ -38,6 +38,90 @@
     line-height: 26px;
   }
 }
+// Общие стили лэйблов
+.form__label {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 26px;
+
+  &--bold {
+    text-transform: initial;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+// Общие стили импутов
+.form__input {
+  height: 58px;
+  position: relative;
+  padding: 18px 22px 14px 22px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $text-main;
+  font-weight: bold;
+  background-color: $input;
+  border: none;
+
+  &:hover {
+    background-color: $input-hover;
+  }
+
+  &:focus {
+    background-color: $text-accent;
+    box-shadow: inset 0 0 0 4px $input-hover;
+  }
+
+  &:disabled {
+    background-color: $input-active;
+    opacity: 0.8;
+  }
+
+  &--phone {
+    padding-right: 65px;
+    width: 100%;
+    background-image: url("../img/phone-square.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+
+    &--active {
+      background-image: url("../img/phone-square.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+
+  &--email {
+    padding-right: 65px;
+    width: 100%;
+    background-image: url("../img/mail-square.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+
+    &--active {
+      background-image: url("../img/mail-square.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+
+  &::placeholder,
+  &--textarea {
+    width: 100%;
+    min-height: 160px;
+    padding-top: 10px;
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 26px;
+    color: $text-main;
+    font-weight: bold;
+  }
+}
+
+input[type="text"] {
+  width: 100%;
+}
 // форма ФИО
 .form__fieldset--name {
   .form__label {
@@ -233,6 +317,7 @@
     .form__wrapper-visited {
       width: 960px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       margin-left: 0;
     }
@@ -255,83 +340,12 @@
     }
 
     .form__input {
+      padding-top: 20px;
       margin-bottom: 47px;
     }
   }
 }
-// Общие стили лэйблов
-.form__label {
-  position: relative;
-  display: block;
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 26px;
 
-  &--bold {
-    text-transform: initial;
-    font-size: 18px;
-    font-weight: bold;
-  }
-}
-// Общие стили импутов
-.form__input {
-  height: 58px;
-  position: relative;
-  padding: 18px 22px 14px 22px;
-  background-color: $input;
-  border: none;
-
-  &:hover {
-    background-color: $input-hover;
-  }
-
-  &:focus {
-    background-color: $text-accent;
-    border: 4px solid $input-hover;
-  }
-  // чтобы не делать лишний див, намутил поля телефона и емэйла градиентом с иконкой,
-  // теперь думаю стоила ли эта конструкция того :)
-  &--phone {
-    width: 100%;
-    background-image: url("../img/phone-square.svg");
-    background-repeat: no-repeat;
-    background-position: right;
-
-    &--active {
-      background-image: url("../img/phone-square.svg");
-      background-repeat: no-repeat;
-      background-position: right;
-    }
-  }
-
-  &--email {
-    width: 100%;
-    background-image: url("../img/mail-square.svg");
-    background-repeat: no-repeat;
-    background-position: right;
-
-    &--active {
-      background-image: url("../img/mail-square.svg");
-      background-repeat: no-repeat;
-      background-position: right;
-    }
-  }
-
-  &::placeholder,
-  &--textarea {
-    width: 100%;
-    min-height: 160px;
-    margin-bottom: 36px;
-    font-size: 18px;
-    line-height: 26px;
-    color: $text-main;
-    font-weight: bold;
-  }
-}
-
-input[type="text"] {
-  width: 100%;
-}
 // кастомные чекбоксы и радио
 input[type="radio"]:checked + .form__label::after {
   content: "";
@@ -344,6 +358,7 @@ input[type="radio"]:checked + .form__label::after {
   background-color: $text-main;
   border: 3px solid $text-main;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 input[type="radio"] + .form__label::before {
@@ -357,6 +372,7 @@ input[type="radio"] + .form__label::before {
   background-color: $input;
   border: 5px solid $input;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked + .form__label::after {
@@ -369,6 +385,7 @@ input[type="checkbox"]:checked + .form__label::after {
   height: 14px;
   border-left: 4px solid $text-main;
   border-bottom: 4px solid $text-main;
+  cursor: pointer;
 }
 
 input[type="checkbox"] + .form__label::before {
@@ -382,6 +399,33 @@ input[type="checkbox"] + .form__label::before {
   background-color: $input;
   border: 5px solid $input;
   border-radius: 10%;
+  cursor: pointer;
+}
+
+input[type="radio"]:active:checked + .form__label::after,
+input[type="checkbox"]:active:checked + .form__label::after {
+  opacity: 0.3;
+}
+
+input[type="radio"]:hover + .form__label::before,
+input[type="radio"]:focus + .form__label::before,
+input[type="checkbox"]:hover + .form__label::before,
+input[type="checkbox"]:focus + .form__label::before {
+  background-color: $input-hover;
+  border-color: $input-hover;
+}
+
+input[type="radio"]:active + .form__label::before,
+input[type="checkbox"]:active + .form__label::before {
+  background-color: $input-active;
+  border-color: $input-active;
+}
+
+input[type="radio"]:disabled + .form__label::before,
+input[type="checkbox"]:disabled + .form__label::before {
+  background-color: $input-active;
+  border-color: $input-active;
+  opacity: 0.8;
 }
 // кнопка отправить
 .form__button {

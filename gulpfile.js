@@ -14,6 +14,17 @@ const del = require("del");
 const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 
+// html таск: положить из сорса в билд, перезапустить сервер
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true})) //мумификация html
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream()); // перезапуск сервера
+};
+
+exports.html = html;
+
 // Styles
 const styles = () => {
   return gulp.src("source/sass/style.scss") //взять файл из
@@ -24,34 +35,24 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())                     // мумифицирует css
-    .pipe(rename("style.min.css"))    // переименовывает в
+    .pipe(rename("style.min.css"))   // переименовывает в
     .pipe(sourcemap.write("."))     // кладет карты кода в корень "."
-    .pipe(gulp.dest("build/css"))  //положить файл в
-    .pipe(sync.stream());
+    .pipe(gulp.dest("build/css"))  // положить файл в
+    .pipe(sync.stream());         // перезапуск сервера
 };
 
 exports.styles = styles;
 
+// минификация js и перезагрузка
 const jsMin = () => {
   return gulp.src("source/js/*.js")
-  // .pipe(uglify())
+  .pipe(uglify())
   .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 };
 
 exports.jsMin = jsMin;
 
-//мумификация html
-// html таск: положить из сорса в билд, перезапустить сервер
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({
-      collapseWhitespace: true})) //мумификация html
-    .pipe(gulp.dest("build"))
-    .pipe(sync.stream());
-};
-
-exports.html = html;
 // Server
 const server = (done) => {
   sync.init({
@@ -72,8 +73,6 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/js/*.js", gulp.series("jsMin"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-  gulp.watch("source/js/app.js").on("change", sync.reload);
 }
 
 exports.default = (done) => gulp.series(
@@ -118,16 +117,6 @@ const sprite = () => {
 }
 
 exports.sprite = sprite
-
-// внутренний спрайт
-const inSprite = () => {
-  return gulp.src("source/img/**/in-icon-*.svg")
-    .pipe(svgstore())
-    .pipe(rename("in-sprite.svg"))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.inSprite = inSprite
 
 // коприрование в папку билда
 const copy = () => {
