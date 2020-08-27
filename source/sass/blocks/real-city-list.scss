@@ -7,8 +7,8 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: space-around;
-    padding: 60px 0;
+    flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -21,16 +21,20 @@
 
   @media screen and (min-width: 768px) {
     width: 33%;
-    padding-top: 100px;
+    height: 330px;
+    padding-top: 157px;
     padding-right: 36px;
     padding-left: 36px;
     margin: 0;
     text-align: center;
 
-
     &--souvenirs {
       order: 1;
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 51px;
   }
 }
 
@@ -46,8 +50,12 @@
     width: 75px;
     height: 75px;
     left: 50%;
-    top: 0;
+    top: 60px;
     transform: translateX(-50%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 52%;
   }
 }
 
@@ -55,7 +63,7 @@
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-size: 21px;
   }
 

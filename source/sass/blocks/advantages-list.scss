@@ -10,6 +10,7 @@
   padding: 26px 10%;
   background-color: $list-main;
   border-bottom: 1px solid #d6d6d6;
+  overflow: hidden;
 
   &:last-child {
     border-bottom: none;
@@ -36,11 +37,17 @@
     }
 
     &:first-child {
-      min-height: 471px;
-
       @media screen and (min-width: 768px) {
-        min-height: 586px;
+        display: contents;
       }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 42px 14%;
+
+    &--accent {
+      padding: 0;
     }
   }
 }
@@ -84,6 +91,7 @@
 
     &--triangle {
       padding: 50px 15%;
+      padding-bottom: 58px;
     }
   }
 }
@@ -98,6 +106,10 @@
     margin-right: auto;
     margin-bottom: 13px;
     font-size: 21px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 10px;
   }
 }
 
@@ -125,11 +137,10 @@
 // позиционирование списка в списке
 .advantages-list__real-city {
   align-self: stretch;
-  grid-row: 2;
   grid-column: 1 / -1;
 
   @media screen and (min-width: 768px) {
-    height: 330px;
+    height: auto;
   }
 }
 // картинки
