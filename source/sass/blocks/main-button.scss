@@ -1,0 +1,33 @@
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: $text-accent;
+  background-color: $main;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $main-hover;
+  }
+
+  &:active {
+    color: rgba($text-accent, 0.6);
+    background-color: $main-active;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $disabled;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $disabled;
+    }
+  }
+}

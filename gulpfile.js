@@ -34,10 +34,11 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))      // положить файл в
     .pipe(csso())                     // мумифицирует css
     .pipe(rename("style.min.css"))   // переименовывает в
     .pipe(sourcemap.write("."))     // кладет карты кода в корень "."
-    .pipe(gulp.dest("build/css"))  // положить файл в
+    .pipe(gulp.dest("build/css"))  // положить мумифицтрованный файл в
     .pipe(sync.stream());         // перезапуск сервера
 };
 
@@ -57,7 +58,7 @@ exports.jsMin = jsMin;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -88,10 +89,10 @@ const images = () => {
       imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo({
-          plugins: [
-              {removeViewBox: false},
-              {cleanupIDs: false}
-          ]
+        plugins: [
+          {removeViewBox: false},
+          {cleanupIDs: false}
+        ]
       })
     ]))
     .pipe(gulp.dest("source/img"))

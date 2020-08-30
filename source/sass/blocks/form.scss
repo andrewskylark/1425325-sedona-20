@@ -31,6 +31,8 @@
 .form__legend {
   padding-top: 20px;
   margin-bottom: 14px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 
   @media screen and (min-width: 768px) {
@@ -119,7 +121,8 @@
   }
 }
 
-input[type="text"] {
+.form__input[type="text"] {
+  min-width: 0; // для фаерфокса, чтобы инпуты не вылазили
   width: 100%;
 }
 // форма ФИО
@@ -139,6 +142,7 @@ input[type="text"] {
     .form__legend {
       text-align: left;
       margin-bottom: 49px;
+      margin-left: 0;
     }
 
     .form__label {
@@ -237,6 +241,7 @@ input[type="text"] {
     @media screen and (min-width: 768px) {
       text-align: left;
       margin-bottom: 73px;
+      margin-left: 0;
     }
 
     @media screen and (min-width: 1200px) {
@@ -316,9 +321,8 @@ input[type="text"] {
   @media screen and (min-width: 1200px) {
     .form__wrapper-visited {
       width: 960px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(4, 253px);
       margin-left: 0;
     }
 
@@ -340,7 +344,7 @@ input[type="text"] {
     }
 
     .form__input {
-      padding-top: 20px;
+      padding-top: 17px;
       margin-bottom: 47px;
     }
   }
