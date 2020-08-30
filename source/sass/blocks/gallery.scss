@@ -136,15 +136,17 @@
 }
 
 .gallery__caption {
-  padding-top: 10px;
   position: relative;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 10px;
   text-align: left;
   font-weight: bold;
 
   @media screen and (min-width: 768px) {
     min-height: 80px;
-    padding: 15px 15px 0 20px;
+    padding: 15px 95px 0 20px;
     background-color: #f2f2f2;
   }
 

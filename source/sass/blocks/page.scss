@@ -1,37 +1,5 @@
-@font-face {
-  font-family: "PTSans";
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/ptsans.woff2") format("woff2"),
-    url("../fonts/ptsans.woff") format("woff");
-}
-
-@font-face {
-  font-family: "PTSans";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/ptsansbold.woff2") format("woff2"),
-    url("../fonts/ptsansbold.woff") format("woff");
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-}
-
-body {
-  min-width: 320px;
-}
-
 .page__body {
+  min-width: 320px;
   min-height: 100%;
   padding: 0;
   margin: 0 auto;
@@ -49,61 +17,4 @@ body {
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-}
-
-.ul-clear {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.p-clear {
-  margin: 0;
-  padding: 0;
-}
-
-.title {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 26px;
-
-  &--bigger {
-    font-size: 21px;
-  }
-}
-
-.main-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 58px;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-  color: $text-accent;
-  background-color: $main;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: $main-hover;
-  }
-
-  &:active {
-    color: rgba($text-accent, 0.6);
-    background-color: $main-active;
-  }
-
-  &:disabled,
-  &--disabled {
-    background-color: $disabled;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $disabled;
-    }
-  }
 }

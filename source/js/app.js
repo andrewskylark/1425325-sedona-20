@@ -1,16 +1,16 @@
 // мобильное меню
-var nav = document.querySelector('.nav');
-var navToggle = document.querySelector('.nav__toggle');
+var nav = document.querySelector(".nav");
+var navToggle = document.querySelector(".nav__toggle");
 
-nav.classList.remove('nav--no-js');
+nav.classList.remove("nav--no-js");
 
-navToggle.addEventListener('click', function () {
-  if (nav.classList.contains('nav--closed')) {
-    nav.classList.remove('nav--closed');
-    nav.classList.add('nav--opened');
+navToggle.addEventListener("click", function () {
+  if (nav.classList.contains("nav--closed")) {
+    nav.classList.remove("nav--closed");
+    nav.classList.add("nav--opened");
   } else {
-    nav.classList.add('nav--closed');
-    nav.classList.remove('nav--opened');
+    nav.classList.add("nav--closed");
+    nav.classList.remove("nav--opened");
   }
 });
 
@@ -18,11 +18,11 @@ navToggle.addEventListener('click', function () {
 function initMap() {
   // локация
   var sedona = { lat: 34.833837, lng: -111.684529 };
-  var infoContent = '<h3>City of Sedona</h3> <p>Welcome to the Gorgeous</p>';
-  var markerIcon = 'img/icon-map-marker.svg';
+  var infoContent = "<h3>City of Sedona</h3> <p>Welcome to the Gorgeous</p>";
+  var markerIcon = "img/icon-map-marker.svg";
   // создание карты, центр на локации
   var sedonaMap = new google.maps.Map(
-    document.getElementById('map'), {
+    document.getElementById("map"), {
     zoom: 7, center: sedona
   });
   // маркер и его свойства
@@ -60,35 +60,35 @@ if (reviewForm) {
 
     if (!inputName.value || !email.value || !phone.value || !surName.value) {
       evt.preventDefault ();
-      modalFail.classList.add("modal-show");
+      modalFail.classList.add("modal--show");
       closeFail.focus();
 
       closeFail.addEventListener ("click", function() {
-      modalFail.classList.remove("modal-show");
+      modalFail.classList.remove("modal--show");
       })
 
       window.addEventListener ("keydown", function(evt) {
         if (evt.keyCode === 27) {
-          if (modalFail.classList.contains("modal-show")) {
-              modalFail.classList.remove("modal-show");
+          if (modalFail.classList.contains("modal--show")) {
+              modalFail.classList.remove("modal--show");
           }
         }
       })
-      // при клике во все без класса modal-show
+      // при клике во все без класса modal--show
       window.addEventListener ("click", function(evt) {
-        if (evt.target.classList.contains("modal-show")) {
+        if (evt.target.classList.contains("modal--show")) {
         } else {
-          modalFail.classList.remove("modal-show");
+          modalFail.classList.remove("modal--show");
         }
       })
 
     } else {
-      modalSuccess.classList.add("modal-show");
+      modalSuccess.classList.add("modal--show");
       closeSuccess.focus();
     }
   })
 };
 
-if (typeof SimpleLightbox !== 'undefined') {
-  var lightbox = new SimpleLightbox('.gallery__list a', { /* options */ });
+if (typeof SimpleLightbox !== "undefined") {
+  var lightbox = new SimpleLightbox(".gallery__list a", { /* options */ });
 };

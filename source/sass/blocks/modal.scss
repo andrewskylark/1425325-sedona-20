@@ -106,17 +106,17 @@
   background-color: $input;
 }
 
-.modal-show {
+.modal--show {
   display: flex;
   animation: bounce 0.4s;
 }
 
-.modal--fail.modal-show {
+.modal--fail.modal--show {
   display: flex;
   animation: shake 0.4s;
 }
 
-.modal-close {
+.modal--close {
   display: none;
 }
 
