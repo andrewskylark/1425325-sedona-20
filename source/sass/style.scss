@@ -1,9 +1,9 @@
 @import "normalize.scss";
-@import "variables.scss";
+@import "common/fonts.scss";
+@import "common/variables.scss";
 @import "blocks/page.scss";
 @import "blocks/title.scss";
-@import "blocks/p-clear.scss";
-@import "blocks/ul-clear.scss";
+@import "common/common.scss";
 @import "blocks/page-header.scss";
 @import "blocks/site-list.scss";
 @import "blocks/page-main.scss";
@@ -19,6 +19,4 @@
 @import "blocks/video.scss";
 @import "blocks/modal.scss";
 @import "blocks/nav.scss";
-@import "blocks/fonts.scss";
-@import "blocks/hidden.scss";
 @import "blocks/main-button.scss";
